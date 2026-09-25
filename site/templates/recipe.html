@@ -64,7 +64,7 @@
           {% if s.heat or s.oven %}
           <p class="badges">
             {% if s.heat %}<span class="badge heat">{{ tt("Stufe", "Heat") }} {{ s.heat }}/9</span>{% endif %}
-            {% if s.oven %}<span class="badge oven">{{ s.oven.temp_c }} °C{% if s.oven.mode %} {{ tt(OVEN[s.oven.mode][0], OVEN[s.oven.mode][1]) }}{% endif %}</span>{% endif %}
+            {% if s.oven %}<span class="badge oven">{{ s.oven.temp_c }}&nbsp;°C{% if s.oven.mode %} {{ tt(OVEN[s.oven.mode][0], OVEN[s.oven.mode][1]) }}{% endif %}</span>{% endif %}
           </p>
           {% endif %}
           <p class="l-de" lang="de">{{ s.text.de | refs(r._ings, "de") }}</p>

@@ -141,7 +141,7 @@ section { margin-top: 2rem; }
   padding: .45rem .4rem; border-bottom: 1px solid var(--line); border-radius: 4px;
   transition: background-color .15s;
 }
-.ingredients .amt { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.ingredients .amt { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .ingredients .sub { grid-column: 2; font-size: .85rem; color: var(--muted); }
 .ingredients .optional .name { color: var(--muted); }
 .ingredients .taste { color: var(--muted); font-size: .9em; }

@@ -119,7 +119,7 @@
         var x = +el.dataset.amount * servings / base, unit = el.dataset.unit;
         el.innerHTML = ["de", "en"].map(function (l, i) {
           var f = fmt(x, unit, l), u = UNIT[f.unit] ? UNIT[f.unit][i] : f.unit;
-          return '<span class="l-' + l + '" lang="' + l + '">' + f.n + (u ? " " + u : "") + "</span>";
+          return '<span class="l-' + l + '" lang="' + l + '">' + f.n + (u ? "\u00a0" + u : "") + "</span>";
         }).join("");
       });
     };

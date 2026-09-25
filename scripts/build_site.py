@@ -71,6 +71,19 @@ def refs(text: str, ings: dict, lang: str) -> Markup:
     return Markup(REF.sub(sub, str(escape(text))))
 
 
+# "55 g", "3-5 Minuten", "20 %": a line break between number and unit reads badly.
+UNIT_WORDS = (r"g|kg|ml|l|cm|mm|h|min|Min\.?|Minuten|Stunden?|minutes?|hours?|Sekunden|seconds?"
+              r"|°C|%|EL|TL|tbsp|tsp|Prisen?|pinch|cups?|lb|oz|Stück|pieces?|Scheiben|slices?")
+NUM_UNIT = re.compile(rf"(\d) (?=(?:{UNIT_WORDS})(?![\w]))")
+
+
+def keep_units(value):
+    """Jinja finalize: glue numbers to their units with a no-break space in all rendered text."""
+    if isinstance(value, str):  # Markup is a str subclass and stays Markup
+        return value.__class__(NUM_UNIT.sub("\\1\u00a0", value))
+    return value
+
+
 def tag_label(tag: str) -> str:
     return tag.split(":", 1)[-1]
 
@@ -80,7 +93,8 @@ def build():
     if failed:
         return 1
     env = Environment(loader=FileSystemLoader(SITE / "templates"),
-                      autoescape=select_autoescape(), trim_blocks=True, lstrip_blocks=True)
+                      autoescape=select_autoescape(), trim_blocks=True, lstrip_blocks=True,
+                      finalize=keep_units)
     env.filters.update(amount=fmt_amount, minutes=fmt_minutes, timer=fmt_timer,
                        refs=refs, tag_label=tag_label)
     env.globals.update(UNITS=UNITS, OVEN=OVEN, FACETS=FACETS)
