@@ -19,5 +19,24 @@
       "tried",
       "favourite"
     ]
+  },
+  {
+    "id": "chicken-gnocchi-walnuts",
+    "title": "Creamy Chicken Gnocchi Skillet with Toasted Walnuts",
+    "lang": "en",
+    "file": "recipes/chicken-gnocchi-walnuts.yaml",
+    "time_total": 30,
+    "tags": [
+      "course:main",
+      "cuisine:fusion",
+      "protein:chicken",
+      "method:sear",
+      "method:simmer",
+      "equipment:stovetop",
+      "effort:low",
+      "season:autumn",
+      "mood:comfort",
+      "time:quick"
+    ]
   }
 ]

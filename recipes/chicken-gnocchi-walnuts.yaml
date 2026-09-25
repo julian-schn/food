@@ -1,0 +1,72 @@
+id: chicken-gnocchi-walnuts
+title: Creamy Chicken Gnocchi Skillet with Toasted Walnuts
+lang: en
+description: One-pan autumn dinner. Seared chicken, golden gnocchi, light cream sauce, crunchy walnuts.
+source:
+  type: original
+  url: null
+  credit: claude chat, sep 2025
+servings: 2
+time:
+  active: 30
+  passive: 0
+tags:
+  course: [main]
+  cuisine: [fusion]
+  protein: [chicken]
+  method: [sear, simmer]
+  equipment: [stovetop]
+  effort: low
+  season: [autumn]
+  mood: [comfort]
+ingredients:
+  - id: walnuts
+    name: walnuts
+    amount: 50
+    unit: g
+    substitute: cashews
+  - id: chicken
+    name: chicken breast, cut into pieces
+    amount: 400
+    unit: g
+  - id: oil
+    name: olive oil
+    amount: null
+    unit: to-taste
+  - id: gnocchi
+    name: gnocchi
+    amount: 500
+    unit: g
+  - id: garlic
+    name: garlic, minced
+    amount: null
+    unit: piece
+  - id: cream
+    name: cream
+    amount: 200
+    unit: ml
+  - id: herbs
+    name: fresh thyme or sage sprigs
+    amount: null
+    unit: to-taste
+  - id: salt_pepper
+    name: salt and pepper
+    amount: null
+    unit: to-taste
+steps:
+  - title: Toast the nuts
+    text: Toast {walnuts} in a dry pan, stirring often, until light golden and fragrant. They rattle crisply when done. Watch them, golden to burnt is fast.
+    heat: 5
+    timer: 240
+  - title: Sear the chicken
+    text: Season {chicken} with {salt_pepper}, sear in {oil}.
+    heat: 8
+    timer: 300
+  - title: Gnocchi
+    text: Add {gnocchi} and {garlic} to the same pan and cook until golden.
+  - title: Sauce
+    text: Pour in {cream}, add {herbs}, simmer until thick.
+    heat: 4
+  - title: Serve
+    text: Fish out the bare herb stems, top with the toasted walnuts.
+notes: Servings estimated from quantities. Thyme can cook on the sprig, leaves fall off, remove stems before serving. Fresh garden thyme is stronger than dried, go easy.
