@@ -1,0 +1,23 @@
+[
+  {
+    "id": "buldak-carbonara",
+    "title": "Buldak Carbonara",
+    "lang": "en",
+    "file": "recipes/buldak-carbonara.yaml",
+    "time_total": 10,
+    "tags": [
+      "course:main",
+      "course:snack",
+      "cuisine:korean",
+      "protein:egg",
+      "method:boil",
+      "equipment:stovetop",
+      "effort:low",
+      "mood:comfort",
+      "mood:late-night",
+      "time:quick",
+      "tried",
+      "favourite"
+    ]
+  }
+]

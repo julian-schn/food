@@ -1,0 +1,41 @@
+# Controlled vocabulary. Canonical values are English kebab-case.
+# aliases map what you (or a source site) might say -> canonical value.
+# The agent may only use values listed here. New values go in `proposed` first.
+
+facets:
+  course:
+    multi: true
+    values: [main, side, starter, soup, salad, snack, breakfast, dessert, baking, sauce, drink]
+  cuisine:
+    multi: true
+    values: [german, italian, french, american, british, korean, japanese, chinese, thai, indian, mexican, levantine, mediterranean, fusion]
+  protein:
+    multi: true
+    values: [beef, pork, chicken, lamb, fish, seafood, egg, tofu, legumes, none]
+    aliases: {rind: beef, schwein: pork, hähnchen: chicken, huhn: chicken, lamm: lamb, fisch: fish, ei: egg}
+  method:
+    multi: true
+    values: [braise, roast, sear, boil, simmer, bake, fry, air-fry, slow-cook, grill, raw, no-cook]
+    aliases: {schmoren: braise, braten: sear, backen: bake}
+  equipment:
+    multi: true
+    values: [stovetop, oven, slow-cooker, air-fryer, roemertopf, dutch-oven, blender, microwave]
+  effort:
+    multi: false
+    values: [low, medium, project]
+  season:
+    multi: true
+    values: [spring, summer, autumn, winter]
+  mood:
+    multi: true
+    values: [comfort, fancy, late-night, meal-prep, date-night, crowd]
+
+# Derived by scripts/build_index.py, never set by hand:
+#   time: quick (<=30 min total) | weeknight (<=60) | slow (>180)
+#   tried: has at least one log entry
+#   favourite: average log rating >= 4.5
+
+proposed: []
+# - facet: cuisine
+#   value: vietnamese
+#   reason: pho recipe added 2026-10-02

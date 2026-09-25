@@ -1,0 +1,63 @@
+id: buldak-carbonara
+title: Buldak Carbonara
+lang: en
+description: Creamy buldak with an egg yolk sauce. Only way to mess it up is scrambling the yolk.
+source:
+  type: adapted          # original | web | adapted | person
+  url: null
+  credit: random internet comment
+servings: 1
+time:                    # minutes
+  active: 10
+  passive: 0
+tags:
+  course: [main, snack]
+  cuisine: [korean]
+  protein: [egg]
+  method: [boil]
+  equipment: [stovetop]
+  effort: low
+  season: []
+  mood: [comfort, late-night]
+ingredients:
+  - id: ramen
+    name: buldak ramen packet (noodles + sauce + powder)
+    amount: 1
+    unit: piece
+  - id: yolk
+    name: egg yolk
+    amount: 1
+    unit: piece
+  - id: mayo
+    name: kewpie mayo
+    amount: 1
+    unit: tbsp
+    substitute: regular mayo + pinch of sugar
+  - id: sesame
+    name: toasted sesame oil
+    amount: 1
+    unit: tsp
+    optional: true
+  - id: water
+    name: hot noodle water
+    amount: 3
+    unit: tbsp
+steps:
+  - title: Boil water
+    text: Pot of water on high, lid on. Set the {ramen} sauce and powder packets aside.
+    heat: 9
+  - title: Build the sauce
+    text: Whisk {mayo}, {yolk}, {sesame} and both packets into a smooth paste in a big bowl.
+  - title: Cook noodles
+    text: Noodles in, 5 minutes, stir once or twice.
+    heat: 7
+    timer: 300
+  - title: Temper
+    text: Add {water} to the sauce one tablespoon at a time, whisking constantly. Dump it all in and you get scrambled egg.
+  - title: Combine
+    text: Drain, toss the noodles into the sauce, eat immediately.
+notes: Hold back a third of the powder if you want it less nuclear.
+log:
+  - date: 2026-09-17
+    rating: 5
+    note: that shit was banging
