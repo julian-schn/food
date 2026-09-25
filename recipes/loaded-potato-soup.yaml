@@ -1,0 +1,249 @@
+id: loaded-potato-soup
+source_lang: en
+title:
+  de: Loaded Potato Soup (Kartoffelsuppe mit Bacon und Cheddar)
+  en: Loaded Potato Soup
+description:
+  de: Dicke, cremige Kartoffelsuppe mit knusprigem Bacon, kräftigem Cheddar, Schmand und Schnittlauch.
+  en: Thick, creamy potato soup with crispy bacon, sharp cheddar, sour cream and fresh chives.
+source:
+  type: web
+  url: https://thepickledfarmhouse.com/loaded-potato-soup/
+  credit: The Pickled Farmhouse
+servings: 6
+time:
+  active: 40
+  passive: 15
+tags:
+  course: [soup, main]
+  cuisine: [american]
+  protein: [pork]
+  method: [fry, simmer]
+  equipment: [stovetop, dutch-oven]
+  effort: low
+  season: [autumn, winter]
+  mood: [comfort, meal-prep]
+ingredients:
+- id: kartoffeln
+  name:
+    de: Kartoffeln, in 1,5-2 cm Würfeln, Schale teils dran
+    en: potatoes, cut into 1.5-2 cm chunks, some skin left on
+  amount: 1.25
+  unit: kg
+- id: bacon
+  name:
+    de: Bacon (Frühstücksspeck), in Scheiben
+    en: bacon, slices
+  amount: 8
+  unit: piece
+- id: zwiebel
+  name:
+    de: kleine Zwiebel, gewürfelt
+    en: small yellow onion, diced
+  amount: 1
+  unit: piece
+- id: knoblauch
+  name:
+    de: Knoblauchzehen, gehackt
+    en: garlic cloves, minced
+  amount: 3
+  unit: piece
+- id: butter
+  name:
+    de: Butter
+    en: butter
+  amount: 55
+  unit: g
+- id: mehl
+  name:
+    de: Weizenmehl Type 405
+    en: all-purpose flour
+  amount: 30
+  unit: g
+- id: bruehe
+  name:
+    de: Hühnerbrühe
+    en: chicken broth
+  amount: 950
+  unit: ml
+- id: milch
+  name:
+    de: Vollmilch
+    en: whole milk
+  amount: 475
+  unit: ml
+- id: sahne
+  name:
+    de: Schlagsahne
+    en: heavy cream
+  amount: 240
+  unit: ml
+- id: cheddar
+  name:
+    de: Cheddar, kräftig, frisch gerieben
+    en: sharp cheddar, freshly shredded
+  amount: 225
+  unit: g
+- id: schmand
+  name:
+    de: Schmand
+    en: sour cream
+  amount: 240
+  unit: g
+  substitute:
+    de: saure Sahne (etwas dünner)
+    en: German saure Sahne (a bit thinner)
+- id: pfeffer
+  name:
+    de: Pfeffer, schwarz
+    en: black pepper
+  amount: 0.5
+  unit: tsp
+- id: zwiebelpulver
+  name:
+    de: Zwiebelpulver
+    en: onion powder
+  amount: 0.5
+  unit: tsp
+- id: paprika
+  name:
+    de: Paprikapulver, geräuchert
+    en: smoked paprika
+  amount: 0.25
+  unit: tsp
+  optional: true
+- id: salz
+  name:
+    de: Salz
+    en: salt
+  amount: null
+  unit: to-taste
+- id: cheddar_extra
+  name:
+    de: Cheddar, gerieben
+    en: shredded sharp cheddar
+  amount: null
+  unit: to-taste
+  group:
+    de: Zum Servieren
+    en: For serving
+- id: schnittlauch
+  name:
+    de: Schnittlauch, geschnitten
+    en: fresh chives, chopped
+  amount: null
+  unit: to-taste
+  group:
+    de: Zum Servieren
+    en: For serving
+steps:
+- title:
+    de: Vorbereiten
+    en: Prep
+  text:
+    de: '{kartoffeln} schrubben und würfeln, {bacon} klein schneiden, {zwiebel} würfeln, {knoblauch} hacken,
+      {cheddar} reiben.'
+    en: Scrub and chop {kartoffeln}, chop {bacon}, dice {zwiebel}, mince {knoblauch}, shred {cheddar}.
+- title:
+    de: Bacon auslassen
+    en: Crisp the bacon
+  text:
+    de: Bacon in einem großen Bräter oder schweren Topf braun und knusprig braten. Mit einer Schaumkelle
+      herausnehmen und beiseitestellen, etwa 2 EL Fett im Topf lassen.
+    en: Cook the bacon in a large Dutch oven or heavy pot until browned and crispy. Lift out with a slotted
+      spoon and set aside, leaving about 2 tbsp of the drippings in the pot.
+  heat: 6
+- title:
+    de: Zwiebel und Knoblauch
+    en: Onion and garlic
+  text:
+    de: Zwiebel im Bacon-Fett 4-5 Minuten weich dünsten. Knoblauch zugeben und unter Rühren etwa 30 Sekunden
+      mitgaren.
+    en: Soften the onion in the drippings for 4-5 minutes. Add the garlic and cook about 30 seconds, stirring
+      often.
+  heat: 5
+  timer: 240
+- title:
+    de: Mehlschwitze
+    en: Roux
+  text:
+    de: '{butter} darin schmelzen, {mehl} darüberstäuben und unterrühren. 1-2 Minuten unter ständigem Rühren
+      anschwitzen.'
+    en: Melt {butter} in the pot, sprinkle in {mehl} and stir until combined. Cook 1-2 minutes, stirring
+      constantly.
+  heat: 5
+  timer: 60
+- title:
+    de: Brühe einrühren
+    en: Whisk in the broth
+  text:
+    de: '{bruehe} langsam angießen: erst einen kleinen Schluck glatt rühren, dann den Rest nach und nach
+      unter Rühren zugeben.'
+    en: 'Slowly pour in {bruehe}: whisk a small splash in until smooth, then add the rest gradually while
+      whisking.'
+  heat: 5
+- title:
+    de: Kartoffeln köcheln
+    en: Simmer the potatoes
+  text:
+    de: Kartoffeln in die Brühe geben, sanft aufkochen und 12-18 Minuten köcheln, gelegentlich umrühren,
+      bis sie gabelweich sind.
+    en: Add the potatoes to the broth, bring to a gentle simmer and cook 12-18 minutes, stirring occasionally,
+      until fork-tender.
+  heat: 4
+  timer: 720
+- title:
+    de: Milch und Sahne
+    en: Milk and cream
+  text:
+    de: Hitze reduzieren, {milch} und {sahne} einrühren und 3-5 Minuten sanft erwärmen. Nicht kochen lassen.
+    en: Reduce the heat, stir in {milch} and {sahne} and warm gently for 3-5 minutes. Don't let it boil.
+  heat: 3
+  timer: 180
+- title:
+    de: Käse einschmelzen
+    en: Melt in the cheese
+  text:
+    de: Hitze auf ganz niedrig stellen oder den Topf von der Platte nehmen. Cheddar handvollweise zugeben
+      und jeweils schmelzen lassen, bevor die nächste Handvoll kommt.
+    en: Turn the heat to very low or take the pot off the burner. Add the cheddar a handful at a time, stirring
+      until melted before adding more.
+  heat: 1
+- title:
+    de: Abschmecken
+    en: Season
+  text:
+    de: '{schmand} und etwa die Hälfte vom Bacon unterrühren. Mit {pfeffer}, {zwiebelpulver} und {paprika}
+      würzen, probieren, erst dann mit {salz} abschmecken.'
+    en: Stir in {schmand} and about half the bacon. Add {pfeffer}, {zwiebelpulver} and {paprika} if using,
+      taste, and only then season with {salz}.
+- title:
+    de: Ruhen lassen
+    en: Rest
+  text:
+    de: Suppe 5-10 Minuten ruhen lassen, dabei dickt sie etwas nach.
+    en: Let the soup rest 5-10 minutes to thicken slightly.
+  timer: 300
+- title:
+    de: Servieren
+    en: Serve
+  text:
+    de: In Schalen füllen, mit {cheddar_extra}, dem restlichen Bacon und {schnittlauch} bestreuen. Warm servieren.
+    en: Ladle into bowls, top with {cheddar_extra}, the rest of the bacon and {schnittlauch}. Serve warm.
+notes:
+  de: 'Original in pounds/cups/tablespoons, umgerechnet und gerundet (2,5-3 lb Kartoffeln → 1,25 kg, 4 EL
+    Butter → 55 g, 1/4 cup Mehl → 30 g, 4/2/1 cups Brühe/Milch/Sahne → 950/475/240 ml, 2 cups Cheddar →
+    225 g, 1 cup sour cream → 240 g). US-Sour-Cream hat ca. 20 % Fett, daher Schmand statt saurer Sahne.
+    Aktiv-/Passivzeit aus 20 min Vorbereitung + 35 min Kochen geschätzt, Herdstufen aus "medium/low" übersetzt.
+    Jede Kartoffelsorte geht. Erst probieren, dann salzen: Bacon, Brühe und Käse bringen schon Salz mit.
+    Käse vom Stück selbst reiben und nur bei niedriger Hitze zugeben, sonst wird er
+    grieselig. Zu dick? Schluck Milch oder Brühe. Hält 3-4 Tage im Kühlschrank, sanft aufwärmen. Nicht
+    einfrieren: Kartoffeln werden mehlig, Milchprodukte flocken aus.'
+  en: 'Original in pounds/cups/tablespoons, converted and rounded (2.5-3 lb potatoes → 1.25 kg, 4 tbsp butter
+    → 55 g, 1/4 cup flour → 30 g, 4/2/1 cups broth/milk/cream → 950/475/240 ml, 2 cups cheddar → 225 g,
+    1 cup sour cream → 240 g). US sour cream is about 20 % fat, so the German version uses Schmand rather
+    than saure Sahne. Active/passive split estimated from 20 min prep + 35 min cook, heat levels translated
+    from "medium/low". Any potato works. Taste before salting: bacon, broth and cheese already bring salt.
+    Shred the cheese from the block and add it over low heat only, or it
+    turns grainy. Too thick? Splash of milk or broth. Keeps 3-4 days in the fridge, reheat gently. Don''t
+    freeze: potatoes go grainy and the dairy separates.'

@@ -91,6 +91,32 @@
     ]
   },
   {
+    "id": "loaded-potato-soup",
+    "title": {
+      "de": "Loaded Potato Soup (Kartoffelsuppe mit Bacon und Cheddar)",
+      "en": "Loaded Potato Soup"
+    },
+    "source_lang": "en",
+    "file": "recipes/loaded-potato-soup.yaml",
+    "time_total": 55,
+    "tags": [
+      "course:soup",
+      "course:main",
+      "cuisine:american",
+      "protein:pork",
+      "method:fry",
+      "method:simmer",
+      "equipment:stovetop",
+      "equipment:dutch-oven",
+      "effort:low",
+      "season:autumn",
+      "season:winter",
+      "mood:comfort",
+      "mood:meal-prep",
+      "time:weeknight"
+    ]
+  },
+  {
     "id": "pot-roast-roemertopf",
     "title": {
       "de": "Pot Roast (amerikanischer Rinderbraten) im Römertopf",
