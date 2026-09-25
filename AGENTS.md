@@ -5,6 +5,8 @@
 - `tags.yaml` controlled tag vocabulary
 - `schema/recipe.schema.json` the contract
 - `index.json` generated, never edit by hand
+- `site/` templates and static assets for the GitHub Pages site. `scripts/build_site.py`
+  renders it into `_site/` (generated, never committed; CI builds and deploys it on push to `main`)
 
 ## Adding a recipe
 1. Metric only. Convert imperial (lb, oz, cups, °F) before writing.
