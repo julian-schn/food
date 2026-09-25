@@ -104,6 +104,9 @@ html[data-lang="en"] [data-set-lang="en"] { background: var(--ink); color: var(-
 .result-count { color: var(--ink); margin: 1rem 0 .6rem; }
 
 .cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+/* Grid items won't shrink below their longest word by default; long German compounds need to. */
+.cards > li { min-width: 0; }
+.card h2, .recipe-head h1 { hyphens: auto; overflow-wrap: break-word; }
 .card a { display: block; color: inherit; text-decoration: none; height: 100%; }
 .card a:hover h2 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .card h2 { margin: .1rem 0 .5rem; font-size: 1.6rem; line-height: 1.05; letter-spacing: -0.02em; }
