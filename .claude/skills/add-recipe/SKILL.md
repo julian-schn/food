@@ -39,7 +39,8 @@ Close match? Ask whether this is a different version (new file) or a change to t
 Ask once, all together, about things the source doesn't say and a wrong guess would ruin:
 oven mode (umluft vs ober-unter), servings, whether an ingredient is optional.
 Everything you converted or estimated goes in `notes`, in both languages
-(e.g. "Original in cups, umgerechnet").
+(e.g. "Original in cups, umgerechnet"). Write `notes` as a `>-` block and separate topics
+(conversions / tips / storage) with a blank line; the site renders each as its own paragraph.
 
 ## 5. Validate and look at it
 ```
