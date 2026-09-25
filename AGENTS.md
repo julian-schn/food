@@ -33,7 +33,8 @@
 - A genuinely different version of a dish is a new file, not a mutation.
 
 ## Before every commit
-Run `python scripts/build_index.py`. It must pass, and `index.json` is committed with the change.
+Run `.venv/bin/python scripts/build_index.py`. It must pass, and `index.json` is committed with the change.
+First-time setup: `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`.
 
 ## Commits
 Conventional commits, one recipe per commit:
