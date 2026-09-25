@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% from "_macros.html" import t, tt %}
+{% block title %}{{ r.title[r.source_lang] }} · Rezepte{% endblock %}
+{% block description %}{{ r.description[r.source_lang] if r.description else r.title[r.source_lang] }}{% endblock %}
+{% block body_class %}page-recipe{% endblock %}
+{% block main %}
+<article class="recipe">
+  <header class="recipe-head">
+    <h1>{{ t(r.title) }}</h1>
+    {% if r.description %}<p class="lede">{{ t(r.description) }}</p>{% endif %}
+    <dl class="facts">
+      <div><dt>{{ tt("Aktiv", "Active") }}</dt><dd>{{ r.time.active | minutes }}</dd></div>
+      {% if r.time.passive %}<div><dt>{{ tt("Passiv", "Passive") }}</dt><dd>{{ r.time.passive | minutes }}</dd></div>{% endif %}
+      {% if r._rating %}<div><dt>{{ tt("Bewertung", "Rating") }}</dt><dd>★ {{ r._rating }}</dd></div>{% endif %}
+    </dl>
+    <ul class="tags">
+      {% for tag in r._tags %}<li><a href="{{ root }}#{{ tag | urlencode }}">{{ tag | tag_label }}</a></li>{% endfor %}
+    </ul>
+    <button type="button" class="cook-toggle" id="cook-toggle" aria-pressed="false">
+      {{ tt("Kochmodus", "Cook mode") }}
+    </button>
+  </header>
+
+  <section class="ingredients" aria-labelledby="ing-h">
+    <div class="section-head">
+      <h2 id="ing-h">{{ tt("Zutaten", "Ingredients") }}</h2>
+      <div class="scaler" data-base="{{ r.servings }}">
+        <button type="button" data-step="-1" aria-label="−1">−</button>
+        <output id="servings" aria-live="polite">{{ r.servings }}</output>
+        <span>{{ tt("Portionen", "servings") }}</span>
+        <button type="button" data-step="1" aria-label="+1">+</button>
+      </div>
+    </div>
+    <p class="scale-note" id="scale-note" hidden>
+      {{ tt("Mengen im Zubereitungstext sind nicht umgerechnet.", "Amounts in the step text aren't scaled.") }}
+    </p>
+    {% for group, items in r._groups %}
+      {% if group %}<h3>{{ t(group) }}</h3>{% endif %}
+      <ul>
+      {% for i in items %}
+        <li data-ing="{{ i.id }}"{% if i.optional %} class="optional"{% endif %}>
+          <span class="amt"{% if i.amount is not none %} data-amount="{{ i.amount }}" data-unit="{{ i.unit or '' }}"{% endif %}>
+            {%- if i.amount is not none -%}
+            <span class="l-de" lang="de">{{ i.amount | amount("de") }}</span><span class="l-en" lang="en">{{ i.amount | amount("en") }}</span>
+            {%- endif -%}
+            {%- if UNITS[i.unit][0] and i.unit != "to-taste" %} {{ tt(UNITS[i.unit][0], UNITS[i.unit][1]) }}{% endif -%}
+          </span>
+          <span class="name">{{ t(i.name) }}{% if i.unit == "to-taste" %} <em class="taste">{{ tt("nach Geschmack", "to taste") }}</em>{% endif %}{% if i.optional %} <em>{{ tt("(optional)", "(optional)") }}</em>{% endif %}</span>
+          {% if i.substitute %}<span class="sub">{{ tt("oder", "or") }} {{ t(i.substitute) }}</span>{% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endfor %}
+  </section>
+
+  <section class="steps" aria-labelledby="steps-h">
+    <h2 id="steps-h">{{ tt("Zubereitung", "Method") }}</h2>
+    <ol>
+    {% for s in r.steps %}
+      <li class="step">
+        <label class="step-done"><input type="checkbox"><span class="visually-hidden">{{ tt("Erledigt", "Done") }}</span></label>
+        <div class="step-body">
+          <h3>{{ t(s.title) }}</h3>
+          {% if s.heat or s.oven %}
+          <p class="badges">
+            {% if s.heat %}<span class="badge heat">{{ tt("Stufe", "Heat") }} {{ s.heat }}/9</span>{% endif %}
+            {% if s.oven %}<span class="badge oven">{{ s.oven.temp_c }} °C{% if s.oven.mode %} {{ tt(OVEN[s.oven.mode][0], OVEN[s.oven.mode][1]) }}{% endif %}</span>{% endif %}
+          </p>
+          {% endif %}
+          <p class="l-de" lang="de">{{ s.text.de | refs(r._ings, "de") }}</p>
+          <p class="l-en" lang="en">{{ s.text.en | refs(r._ings, "en") }}</p>
+          {% if s.timer %}
+          <button type="button" class="timer" data-seconds="{{ s.timer }}">
+            <span class="timer-icon" aria-hidden="true">⏱</span> <span class="timer-left">{{ s.timer | timer }}</span>
+          </button>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+    </ol>
+  </section>
+
+  {% if r.notes %}
+  <section class="notes" aria-labelledby="notes-h">
+    <h2 id="notes-h">{{ tt("Notizen", "Notes") }}</h2>
+    {{ t(r.notes, "p") }}
+  </section>
+  {% endif %}
+
+  {% if r.log %}
+  <section class="log" aria-labelledby="log-h">
+    <h2 id="log-h">{{ tt("Gekocht", "Cooked") }}</h2>
+    <ul>
+    {% for e in r.log | reverse %}
+      <li><time datetime="{{ e.date }}">{{ e.date }}</time>
+        {% if e.rating %}<span class="stars" aria-label="{{ e.rating }} / 5">{{ "★" * e.rating }}{{ "☆" * (5 - e.rating) }}</span>{% endif %}
+        {% if e.note %}<q>{{ e.note }}</q>{% endif %}</li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if r.source %}
+  <footer class="source">
+    {{ tt("Quelle", "Source") }}:
+    {% if r.source.url %}<a href="{{ r.source.url }}" rel="noopener">{{ r.source.credit or r.source.url }}</a>{% else %}{{ r.source.credit }}{% endif %}{{ " " }}
+    {%- if r.source.type == "adapted" %}({{ tt("angepasst", "adapted") }}){% endif %}
+    {% if r._source_url %} · <a href="{{ r._source_url }}">YAML</a>{% endif %}
+  </footer>
+  {% endif %}
+</article>
+{% endblock %}

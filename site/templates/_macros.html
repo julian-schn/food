@@ -1,0 +1,9 @@
+{# Render a {de, en} text in both languages; CSS shows the active one. #}
+{% macro t(obj, tag="span") -%}
+<{{ tag }} class="l-de" lang="de">{{ obj.de }}</{{ tag }}><{{ tag }} class="l-en" lang="en">{{ obj.en }}</{{ tag }}>
+{%- endmacro %}
+
+{# Same, for literal strings passed inline. #}
+{% macro tt(de, en, tag="span") -%}
+<{{ tag }} class="l-de" lang="de">{{ de }}</{{ tag }}><{{ tag }} class="l-en" lang="en">{{ en }}</{{ tag }}>
+{%- endmacro %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% from "_macros.html" import t, tt %}
+{% block body_class %}page-index{% endblock %}
+{% block main %}
+<section class="filters" aria-label="Filter">
+  <label class="search">
+    <span class="visually-hidden">{{ tt("Suchen", "Search") }}</span>
+    <input type="search" id="q" autocomplete="off"
+           data-ph-de="Rezept suchen…" data-ph-en="Search recipes…" placeholder="Rezept suchen…">
+  </label>
+  <details class="facets" id="facets">
+    <summary>{{ tt("Filter", "Filters") }} <span class="count" id="active-count" hidden></span></summary>
+    {% for facet, tags in facets %}
+    <fieldset class="facet" data-facet="{{ facet }}">
+      <legend>{{ tt(FACETS[facet].de, FACETS[facet].en) }}</legend>
+      <div class="chips">
+      {% for tag in tags %}
+        <label class="chip"><input type="checkbox" value="{{ tag }}"><span>{{ tag | tag_label }}</span></label>
+      {% endfor %}
+      </div>
+    </fieldset>
+    {% endfor %}
+    <button type="button" class="link-button" id="clear">{{ tt("Filter zurücksetzen", "Clear filters") }}</button>
+  </details>
+</section>
+
+<p class="result-count" id="result-count" aria-live="polite"></p>
+
+<ul class="cards" id="cards">
+{% for c in cards %}
+  <li class="card" data-id="{{ c.id }}">
+    <a href="r/{{ c.id }}/">
+      <h2>{{ t(c.title) }}</h2>
+      {% if c.description %}<p class="desc">{{ t(c.description) }}</p>{% endif %}
+      <p class="meta">
+        <span>{{ c.time_total | minutes }}</span>
+        {% if c.rating %}<span aria-label="{{ c.rating }} / 5">★ {{ c.rating }}</span>{% endif %}
+        {% for tag in c.tags if tag.startswith("course:") or tag.startswith("cuisine:") %}<span class="tag">{{ tag | tag_label }}</span>{% endfor %}
+      </p>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+<p class="empty" id="empty" hidden>{{ tt("Nichts gefunden.", "Nothing found.") }}</p>
+
+<script type="application/json" id="recipe-data">{{ data }}</script>
+{% endblock %}

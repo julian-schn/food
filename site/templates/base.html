@@ -1,0 +1,36 @@
+{% from "_macros.html" import tt %}
+<!doctype html>
+<html lang="de" data-lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Rezepte{% endblock %}</title>
+<meta name="description" content="{% block description %}Rezeptsammlung · recipe collection{% endblock %}">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍲</text></svg>">
+<script>
+  // Set the language before first paint so the other one never flashes.
+  (function () {
+    var l = null;
+    try { l = localStorage.getItem("lang"); } catch (e) {}
+    if (l !== "de" && l !== "en") l = /^de\b/i.test(navigator.language || "") ? "de" : "en";
+    document.documentElement.dataset.lang = l;
+    document.documentElement.lang = l;
+  })();
+</script>
+<link rel="stylesheet" href="{{ root }}static/style.css">
+<script src="{{ root }}static/app.js" defer></script>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+<header class="site-header">
+  <a class="brand" href="{{ root }}">{{ tt("Rezepte", "Recipes") }}</a>
+  <div class="lang-switch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set-lang="de" lang="de">DE</button>
+    <button type="button" data-set-lang="en" lang="en">EN</button>
+  </div>
+</header>
+<main>
+{% block main %}{% endblock %}
+</main>
+</body>
+</html>
