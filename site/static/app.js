@@ -26,7 +26,7 @@
     var recipes = JSON.parse(dataEl.textContent);
     var q = $("#q"), facets = $("#facets");
     var boxes = $$(".facet input", facets);
-    var norm = function (s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); };
+    var norm = function (s) { return (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); };
     recipes.forEach(function (r) {
       r.haystack = norm([r.title.de, r.title.en, r.description && r.description.de,
         r.description && r.description.en].join(" "));
