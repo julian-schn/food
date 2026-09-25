@@ -58,8 +58,9 @@ def derived(r: dict) -> list[str]:
     return out
 
 
-def main() -> int:
-    index, failed = [], False
+def load_recipes() -> tuple[list[tuple[Path, dict]], bool]:
+    """Load and validate every recipe. Returns (valid recipes, whether any failed)."""
+    recipes, failed = [], False
     for path in sorted((ROOT / "recipes").glob("*.yaml")):
         r = yaml.safe_load(path.read_text())
         for e in r.get("log", []):  # yaml turns dates into date objects
@@ -72,16 +73,25 @@ def main() -> int:
             for e in errs:
                 print(f"    {e}")
             continue
-        flat = [f"{f}:{v}" for f, val in r["tags"].items()
-                for v in (val if isinstance(val, list) else [val])]
-        index.append({
-            "id": r["id"], "title": r["title"], "source_lang": r["source_lang"],
-            "file": f"recipes/{path.name}",
-            "time_total": r["time"]["active"] + r["time"]["passive"],
-            "tags": flat + derived(r),
-        })
+        recipes.append((path, r))
+    return recipes, failed
+
+
+def flat_tags(r: dict) -> list[str]:
+    return [f"{f}:{v}" for f, val in r["tags"].items()
+            for v in (val if isinstance(val, list) else [val])] + derived(r)
+
+
+def main() -> int:
+    recipes, failed = load_recipes()
     if failed:
         return 1
+    index = [{
+        "id": r["id"], "title": r["title"], "source_lang": r["source_lang"],
+        "file": f"recipes/{path.name}",
+        "time_total": r["time"]["active"] + r["time"]["passive"],
+        "tags": flat_tags(r),
+    } for path, r in recipes]
     out = json.dumps(index, indent=2, ensure_ascii=False) + "\n"
     target = ROOT / "index.json"
     if "--check" in sys.argv:
