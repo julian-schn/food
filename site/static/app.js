@@ -113,7 +113,7 @@
     amts.forEach(function (el) { el.dataset.orig = el.innerHTML; });
     var rescale = function () {
       out.textContent = servings;
-      $("#scale-note").hidden = servings === base;
+      $("#scale-note").classList.toggle("is-hidden", servings === base);
       amts.forEach(function (el) {
         if (servings === base) { el.innerHTML = el.dataset.orig; return; }
         var x = +el.dataset.amount * servings / base, unit = el.dataset.unit;

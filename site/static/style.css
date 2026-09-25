@@ -131,7 +131,9 @@ section { margin-top: 2rem; }
   background: var(--surface); font-size: 1.2rem; line-height: 1;
 }
 .scaler output { font-weight: 700; color: var(--text); min-width: 1.5em; text-align: center; }
+/* Space stays reserved so the list below doesn't shift when the note appears. */
 .scale-note { font-size: .85rem; color: var(--muted); }
+.scale-note.is-hidden { visibility: hidden; }
 .ingredients h3 { font-size: 1rem; margin: 1.2rem 0 .3rem; color: var(--muted); }
 .ingredients ul { list-style: none; padding: 0; margin: .5rem 0; }
 .ingredients li {
@@ -186,9 +188,10 @@ section { margin-top: 2rem; }
 .stars { color: var(--accent); letter-spacing: .1em; }
 .source { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
 
-/* Cook mode: bigger text, keep the screen awake (JS), fewer distractions */
-body.cooking { font-size: 20px; }
-body.cooking .tags, body.cooking .lede, body.cooking .log, body.cooking .source { display: none; }
+/* Cook mode: bigger text, keep the screen awake (JS), fewer distractions.
+   Only touch what sits below the toggle, so the button doesn't jump under the finger. */
+body.cooking .steps, body.cooking .ingredients { font-size: 1.15em; }
+body.cooking .log, body.cooking .source { display: none; }
 body.cooking .step { padding: 1.3rem 0; }
 
 @media (min-width: 52rem) {

@@ -31,7 +31,7 @@
         <button type="button" data-step="1"><span aria-hidden="true">+</span><span class="visually-hidden">{{ tt("Eine Portion mehr", "One serving more") }}</span></button>
       </div>
     </div>
-    <p class="scale-note" id="scale-note" hidden>
+    <p class="scale-note is-hidden" id="scale-note">
       {{ tt("Mengen im Zubereitungstext sind nicht umgerechnet.", "Amounts in the step text aren't scaled.") }}
     </p>
     {% for group, items in r._groups %}
