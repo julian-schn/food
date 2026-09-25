@@ -1,13 +1,17 @@
 id: buldak-carbonara
-title: Buldak Carbonara
-lang: en
-description: Creamy buldak with an egg yolk sauce. Only way to mess it up is scrambling the yolk.
+source_lang: en
+title:
+  de: Buldak Carbonara
+  en: Buldak Carbonara
+description:
+  de: 'Cremiges Buldak mit Eigelb-Soße. Einzige Fehlerquelle: das Eigelb stocken lassen.'
+  en: Creamy buldak with an egg yolk sauce. Only way to mess it up is scrambling the yolk.
 source:
-  type: adapted          # original | web | adapted | person
+  type: adapted
   url: null
   credit: random internet comment
 servings: 1
-time:                    # minutes
+time:
   active: 10
   passive: 0
 tags:
@@ -20,44 +24,80 @@ tags:
   season: []
   mood: [comfort, late-night]
 ingredients:
-  - id: ramen
-    name: buldak ramen packet (noodles + sauce + powder)
-    amount: 1
-    unit: piece
-  - id: yolk
-    name: egg yolk
-    amount: 1
-    unit: piece
-  - id: mayo
-    name: kewpie mayo
-    amount: 1
-    unit: tbsp
-    substitute: regular mayo + pinch of sugar
-  - id: sesame
-    name: toasted sesame oil
-    amount: 1
-    unit: tsp
-    optional: true
-  - id: water
-    name: hot noodle water
-    amount: 3
-    unit: tbsp
+- id: ramen
+  name:
+    de: Buldak-Ramen-Packung (Nudeln + Soße + Pulver)
+    en: buldak ramen packet (noodles + sauce + powder)
+  amount: 1
+  unit: piece
+- id: yolk
+  name:
+    de: Eigelb
+    en: egg yolk
+  amount: 1
+  unit: piece
+- id: mayo
+  name:
+    de: Kewpie-Mayo
+    en: kewpie mayo
+  amount: 1
+  unit: tbsp
+  substitute:
+    de: normale Mayo + Prise Zucker
+    en: regular mayo + pinch of sugar
+- id: sesame
+  name:
+    de: geröstetes Sesamöl
+    en: toasted sesame oil
+  amount: 1
+  unit: tsp
+  optional: true
+- id: water
+  name:
+    de: heißes Nudelwasser
+    en: hot noodle water
+  amount: 3
+  unit: tbsp
 steps:
-  - title: Boil water
-    text: Pot of water on high, lid on. Set the {ramen} sauce and powder packets aside.
-    heat: 9
-  - title: Build the sauce
-    text: Whisk {mayo}, {yolk}, {sesame} and both packets into a smooth paste in a big bowl.
-  - title: Cook noodles
-    text: Noodles in, 5 minutes, stir once or twice.
-    heat: 7
-    timer: 300
-  - title: Temper
-    text: Add {water} to the sauce one tablespoon at a time, whisking constantly. Dump it all in and you get scrambled egg.
-  - title: Combine
-    text: Drain, toss the noodles into the sauce, eat immediately.
-notes: Hold back a third of the powder if you want it less nuclear.
+- title:
+    de: Wasser aufsetzen
+    en: Boil water
+  text:
+    de: Topf Wasser auf höchster Stufe, Deckel drauf. Soßen- und Pulverpäckchen von {ramen} beiseitelegen.
+    en: Pot of water on high, lid on. Set the {ramen} sauce and powder packets aside.
+  heat: 9
+- title:
+    de: Soße anrühren
+    en: Build the sauce
+  text:
+    de: '{mayo}, {yolk}, {sesame} und beide Päckchen in einer großen Schüssel zu einer glatten Paste verrühren.'
+    en: Whisk {mayo}, {yolk}, {sesame} and both packets into a smooth paste in a big bowl.
+- title:
+    de: Nudeln kochen
+    en: Cook noodles
+  text:
+    de: Nudeln rein, 5 Minuten, ein- bis zweimal umrühren.
+    en: Noodles in, 5 minutes, stir once or twice.
+  heat: 7
+  timer: 300
+- title:
+    de: Temperieren
+    en: Temper
+  text:
+    de: '{water} esslöffelweise unter ständigem Rühren zur Soße geben. Alles auf einmal reinkippen gibt
+      Rührei.'
+    en: Add {water} to the sauce one tablespoon at a time, whisking constantly. Dump it all in and you
+      get scrambled egg.
+- title:
+    de: Vermengen
+    en: Combine
+  text:
+    de: Abgießen, Nudeln in der Soße schwenken, sofort essen.
+    en: Drain, toss the noodles into the sauce, eat immediately.
+notes:
+  de: Ein Drittel vom Pulver weglassen, wenn es weniger nuklear sein soll.
+  en: Hold back a third of the powder if you want it less nuclear.
 log:
-  - date: 2026-09-17
-    rating: 5
-    note: that shit was banging
+- date: '2026-09-17'
+  rating: 5
+  note: that shit was banging

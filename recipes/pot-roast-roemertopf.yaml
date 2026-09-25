@@ -1,7 +1,12 @@
 id: pot-roast-roemertopf
-title: Pot Roast (amerikanischer Rinderbraten) im Römertopf
-lang: de
-description: Schmorbraten mit Möhren und Kartoffeln im selben Topf, angepasst für Römertopf statt Bräter.
+source_lang: de
+title:
+  de: Pot Roast (amerikanischer Rinderbraten) im Römertopf
+  en: Pot Roast in a Römertopf
+description:
+  de: Schmorbraten mit Möhren und Kartoffeln im selben Topf, angepasst für Römertopf statt Bräter.
+  en: Braised beef with carrots and potatoes in one pot, adapted for a Römertopf clay pot instead of a
+    roasting pan.
 source:
   type: adapted
   url: https://julchen-kocht.de/pot-roast-amerikanischer-rinderbraten-vom-feinsten/
@@ -20,90 +25,168 @@ tags:
   season: [autumn, winter]
   mood: [comfort, crowd, meal-prep]
 ingredients:
-  - id: rind
-    name: Rinderbraten (Zungenstück, alternativ Keule oder Schulter)
-    amount: 1.5
-    unit: kg
-  - id: zwiebeln
-    name: Zwiebeln
-    amount: 3
-    unit: piece
-  - id: knoblauch
-    name: Knoblauchzehen
-    amount: 2
-    unit: piece
-  - id: moehren
-    name: Möhren
-    amount: 5
-    unit: piece
-  - id: kartoffeln
-    name: Kartoffeln, festkochend (z.B. Drillinge)
-    amount: 500
-    unit: g
-  - id: fond
-    name: Rinderfond oder -brühe
-    amount: 750
-    unit: ml
-  - id: tomatenmark
-    name: Tomatenmark
-    amount: 1
-    unit: tbsp
-  - id: ruebensirup
-    name: Rübensirup
-    amount: 1
-    unit: tbsp
-  - id: paprika
-    name: Paprika edelsüß
-    amount: 2
-    unit: tsp
-  - id: salz_pfeffer
-    name: Salz und Pfeffer
-    amount: null
-    unit: to-taste
-  - id: rosmarin
-    name: Rosmarinzweige
-    amount: 3
-    unit: piece
-  - id: staerke
-    name: Speisestärke, in Wasser aufgelöst
-    amount: 2
-    unit: tsp
-  - id: petersilie
-    name: Petersilie, gehackt
-    amount: 15
-    unit: g
-  - id: oel
-    name: Öl zum Anbraten
-    amount: 2
-    unit: tbsp
+- id: rind
+  name:
+    de: Rinderbraten (Zungenstück, alternativ Keule oder Schulter)
+    en: beef roast (chuck, alternatively round or shoulder)
+  amount: 1.5
+  unit: kg
+- id: zwiebeln
+  name:
+    de: Zwiebeln
+    en: onions
+  amount: 3
+  unit: piece
+- id: knoblauch
+  name:
+    de: Knoblauchzehen
+    en: garlic cloves
+  amount: 2
+  unit: piece
+- id: moehren
+  name:
+    de: Möhren
+    en: carrots
+  amount: 5
+  unit: piece
+- id: kartoffeln
+  name:
+    de: Kartoffeln, festkochend (z.B. Drillinge)
+    en: waxy potatoes (e.g. baby potatoes)
+  amount: 500
+  unit: g
+- id: fond
+  name:
+    de: Rinderfond oder -brühe
+    en: beef stock or broth
+  amount: 750
+  unit: ml
+- id: tomatenmark
+  name:
+    de: Tomatenmark
+    en: tomato paste
+  amount: 1
+  unit: tbsp
+- id: ruebensirup
+  name:
+    de: Rübensirup
+    en: sugar beet syrup (Rübensirup)
+  amount: 1
+  unit: tbsp
+- id: paprika
+  name:
+    de: Paprika edelsüß
+    en: sweet paprika
+  amount: 2
+  unit: tsp
+- id: salz_pfeffer
+  name:
+    de: Salz und Pfeffer
+    en: salt and pepper
+  amount: null
+  unit: to-taste
+- id: rosmarin
+  name:
+    de: Rosmarinzweige
+    en: rosemary sprigs
+  amount: 3
+  unit: piece
+- id: staerke
+  name:
+    de: Speisestärke, in Wasser aufgelöst
+    en: cornstarch, dissolved in water
+  amount: 2
+  unit: tsp
+- id: petersilie
+  name:
+    de: Petersilie, gehackt
+    en: parsley, chopped
+  amount: 15
+  unit: g
+- id: oel
+  name:
+    de: Öl zum Anbraten
+    en: oil for searing
+  amount: 2
+  unit: tbsp
 steps:
-  - title: Römertopf wässern
-    text: Topf und Deckel 10-15 Minuten in kaltes Wasser legen.
-    timer: 900
-  - title: Vorbereiten
-    text: '{rind} in 4 gleich große Stücke. {zwiebeln} und {knoblauch} klein schneiden, {moehren} in mundgerechte Stücke, {kartoffeln} und {rosmarin} säubern.'
-  - title: Fleisch anbraten
-    text: In einer Pfanne in {oel} von allen Seiten scharf anbraten, mit {salz_pfeffer} und {paprika} würzen, in den Römertopf legen.
-    heat: 8
-    timer: 480
-  - title: Zwiebeln anschwitzen
-    text: Zwiebeln und Knoblauch in derselben Pfanne glasig anschwitzen, {ruebensirup} und {tomatenmark} kurz mitrösten.
-    heat: 5
-    timer: 300
-  - title: Ablöschen und einschichten
-    text: Mit {fond} ablöschen, Bratensatz lösen, alles zum Fleisch in den Römertopf. Möhren, Kartoffeln und Rosmarin dazu.
-  - title: Schmoren
-    text: Deckel drauf, Römertopf in den KALTEN Ofen stellen, dann erst einschalten. 3-3,5 Stunden bis das Fleisch zerfällt. Nie in den vorgeheizten Ofen, der Ton reißt.
-    oven: {temp_c: 185, mode: ober-unter}
-    timer: 11700
-  - title: Sauce binden
-    text: Rosmarin raus, Flüssigkeit in einen Topf abgießen, auf dem Herd mit {staerke} kurz aufkochen bis sie eindickt. Nicht im Römertopf.
-    heat: 7
-    timer: 180
-  - title: Anrichten
-    text: Mit {petersilie} bestreuen.
-notes: >-
-  Original: ofenfester Bräter, 160°C Umluft vorgeheizt, 3h. Hier für Römertopf umgebaut
-  (180-190°C Ober-/Unterhitze wegen Kaltstart). Ohne Römertopf: Auflaufform, fest mit Alufolie
-  abdecken. Petersilie im Original 1/2 cup, ca. 15 g. Festkochende Kartoffeln zerfallen nicht,
-  alternativ Kartoffeln und Möhren erst nach 90 Minuten zugeben.
+- title:
+    de: Römertopf wässern
+    en: Soak the clay pot
+  text:
+    de: Topf und Deckel 10-15 Minuten in kaltes Wasser legen.
+    en: Soak pot and lid in cold water for 10-15 minutes.
+  timer: 900
+- title:
+    de: Vorbereiten
+    en: Prep
+  text:
+    de: '{rind} in 4 gleich große Stücke. {zwiebeln} und {knoblauch} klein schneiden, {moehren} in mundgerechte
+      Stücke, {kartoffeln} und {rosmarin} säubern.'
+    en: Cut {rind} into 4 equal pieces. Chop {zwiebeln} and {knoblauch}, cut {moehren} into bite-sized
+      pieces, clean {kartoffeln} and {rosmarin}.
+- title:
+    de: Fleisch anbraten
+    en: Sear the beef
+  text:
+    de: In einer Pfanne in {oel} von allen Seiten scharf anbraten, mit {salz_pfeffer} und {paprika} würzen,
+      in den Römertopf legen.
+    en: Sear hard on all sides in {oel} in a pan, season with {salz_pfeffer} and {paprika}, move to the
+      clay pot.
+  heat: 8
+  timer: 480
+- title:
+    de: Zwiebeln anschwitzen
+    en: Soften the onions
+  text:
+    de: Zwiebeln und Knoblauch in derselben Pfanne glasig anschwitzen, {ruebensirup} und {tomatenmark}
+      kurz mitrösten.
+    en: Sweat onions and garlic in the same pan until translucent, briefly toast {ruebensirup} and {tomatenmark}
+      with them.
+  heat: 5
+  timer: 300
+- title:
+    de: Ablöschen und einschichten
+    en: Deglaze and layer
+  text:
+    de: Mit {fond} ablöschen, Bratensatz lösen, alles zum Fleisch in den Römertopf. Möhren, Kartoffeln
+      und Rosmarin dazu.
+    en: Deglaze with {fond}, scrape up the fond, pour everything over the meat in the clay pot. Add carrots,
+      potatoes and rosemary.
+- title:
+    de: Schmoren
+    en: Braise
+  text:
+    de: Deckel drauf, Römertopf in den KALTEN Ofen stellen, dann erst einschalten. 3-3,5 Stunden bis das
+      Fleisch zerfällt. Nie in den vorgeheizten Ofen, der Ton reißt.
+    en: Lid on, clay pot into a COLD oven, only then switch it on. 3-3.5 hours until the meat falls apart.
+      Never into a preheated oven, the clay cracks.
+  oven:
+    temp_c: 185
+    mode: ober-unter
+  timer: 11700
+- title:
+    de: Sauce binden
+    en: Thicken the sauce
+  text:
+    de: Rosmarin raus, Flüssigkeit in einen Topf abgießen, auf dem Herd mit {staerke} kurz aufkochen bis
+      sie eindickt. Nicht im Römertopf.
+    en: Remove the rosemary, pour the liquid into a saucepan, bring to a boil on the stove with {staerke}
+      until thickened. Not in the clay pot.
+  heat: 7
+  timer: 180
+- title:
+    de: Anrichten
+    en: Serve
+  text:
+    de: Mit {petersilie} bestreuen.
+    en: Sprinkle with {petersilie}.
+notes:
+  de: 'Original: ofenfester Bräter, 160°C Umluft vorgeheizt, 3h. Hier für Römertopf umgebaut (180-190°C
+    Ober-/Unterhitze wegen Kaltstart). Ohne Römertopf: Auflaufform, fest mit Alufolie abdecken. Petersilie
+    im Original 1/2 cup, ca. 15 g. Festkochende Kartoffeln zerfallen nicht, alternativ Kartoffeln und
+    Möhren erst nach 90 Minuten zugeben.'
+  en: 'Original: oven-safe roasting pan, 160°C fan, preheated, 3h. Rebuilt here for a Römertopf (180-190°C
+    conventional because of the cold start). No Römertopf: baking dish tightly covered with foil. Parsley
+    in the original was 1/2 cup, about 15 g. Waxy potatoes don''t fall apart, alternatively add potatoes
+    and carrots only after 90 minutes.'

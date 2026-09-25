@@ -1,8 +1,11 @@
 [
   {
     "id": "buldak-carbonara",
-    "title": "Buldak Carbonara",
-    "lang": "en",
+    "title": {
+      "de": "Buldak Carbonara",
+      "en": "Buldak Carbonara"
+    },
+    "source_lang": "en",
     "file": "recipes/buldak-carbonara.yaml",
     "time_total": 10,
     "tags": [
@@ -22,8 +25,11 @@
   },
   {
     "id": "chicken-gnocchi-walnuts",
-    "title": "Creamy Chicken Gnocchi Skillet with Toasted Walnuts",
-    "lang": "en",
+    "title": {
+      "de": "Cremige Hähnchen-Gnocchi-Pfanne mit gerösteten Walnüssen",
+      "en": "Creamy Chicken Gnocchi Skillet with Toasted Walnuts"
+    },
+    "source_lang": "en",
     "file": "recipes/chicken-gnocchi-walnuts.yaml",
     "time_total": 30,
     "tags": [
@@ -41,8 +47,11 @@
   },
   {
     "id": "geschmorte-lammschulter",
-    "title": "Geschmorte Lammschulter",
-    "lang": "de",
+    "title": {
+      "de": "Geschmorte Lammschulter",
+      "en": "Braised Lamb Shoulder"
+    },
+    "source_lang": "de",
     "file": "recipes/geschmorte-lammschulter.yaml",
     "time_total": 300,
     "tags": [
@@ -62,8 +71,11 @@
   },
   {
     "id": "haehnchengeschnetzeltes-mit-pilzen",
-    "title": "Hähnchengeschnetzeltes mit Pilzen",
-    "lang": "de",
+    "title": {
+      "de": "Hähnchengeschnetzeltes mit Pilzen",
+      "en": "Creamy Chicken and Mushroom Geschnetzeltes"
+    },
+    "source_lang": "de",
     "file": "recipes/haehnchengeschnetzeltes-mit-pilzen.yaml",
     "time_total": 35,
     "tags": [
@@ -80,8 +92,11 @@
   },
   {
     "id": "pot-roast-roemertopf",
-    "title": "Pot Roast (amerikanischer Rinderbraten) im Römertopf",
-    "lang": "de",
+    "title": {
+      "de": "Pot Roast (amerikanischer Rinderbraten) im Römertopf",
+      "en": "Pot Roast in a Römertopf"
+    },
+    "source_lang": "de",
     "file": "recipes/pot-roast-roemertopf.yaml",
     "time_total": 240,
     "tags": [

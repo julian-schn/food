@@ -11,7 +11,15 @@
 2. Stovetop heat goes in `heat` on the 1-9 scale. Oven gets `oven.temp_c` + `oven.mode`
    (default `ober-unter`; convert umluft/ober-unter explicitly, don't guess).
 3. Every ingredient gets a short snake_case `id`. Reference it in step text as `{id}`.
-4. `lang` is the language the recipe is written in. Don't translate unless asked.
+4. Every recipe is bilingual. All prose fields (title, description, notes, ingredient
+   name/substitute/group, step title/text) are `{de: ..., en: ...}`, both required.
+   `source_lang` is the language it came in. That version is authoritative; if the two
+   ever disagree, fix the translation, not the original.
+   - Ingredient names: use what you'd find in a German shop for `de` (Schmorbraten,
+     Butterschmalz, Speisestärke), and the natural English name for `en`. Keep a German
+     term in parentheses in `en` when there's no clean equivalent (Rübensirup).
+   - Every `{ingredient_id}` must appear in both languages of a step. The validator checks.
+   - Don't translate `log` notes, `source.credit` or tag values.
 5. `source.url` for web recipes. `type: adapted` if we changed anything meaningful.
 6. Tags: only values from `tags.yaml`. Map through `aliases` first.
    If nothing fits, add an entry to `proposed` with a reason and leave the tag off.
@@ -19,6 +27,7 @@
 
 ## Editing
 - Never delete or rewrite `log` entries. Append only.
+- Edits to prose update both languages in the same commit.
 - Adaptations the user settles on (e.g. "Keule ohne Knochen, 2.5h") update the recipe
   itself; the reason goes in `notes`.
 - A genuinely different version of a dish is a new file, not a mutation.

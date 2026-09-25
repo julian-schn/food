@@ -26,9 +26,14 @@ def validate(path: Path, r: dict) -> list[str]:
     if len(ids) != len(set(ids)):
         errs.append("duplicate ingredient ids")
     for s in r["steps"]:
-        for ref in REF.findall(s["text"]):
+        name = s["title"]["en"]
+        refs = {lang: set(REF.findall(txt)) for lang, txt in s["text"].items()}
+        for ref in refs["de"] | refs["en"]:
             if ref not in ids:
-                errs.append(f"step '{s['title']}' references unknown ingredient {{{ref}}}")
+                errs.append(f"step '{name}' references unknown ingredient {{{ref}}}")
+        if refs["de"] != refs["en"]:
+            errs.append(f"step '{name}': de/en reference different ingredients "
+                        f"(only de: {sorted(refs['de'] - refs['en'])}, only en: {sorted(refs['en'] - refs['de'])})")
     for facet, val in r["tags"].items():
         if facet not in vocab:
             errs.append(f"unknown tag facet '{facet}'")
@@ -70,7 +75,7 @@ def main() -> int:
         flat = [f"{f}:{v}" for f, val in r["tags"].items()
                 for v in (val if isinstance(val, list) else [val])]
         index.append({
-            "id": r["id"], "title": r["title"], "lang": r["lang"],
+            "id": r["id"], "title": r["title"], "source_lang": r["source_lang"],
             "file": f"recipes/{path.name}",
             "time_total": r["time"]["active"] + r["time"]["passive"],
             "tags": flat + derived(r),

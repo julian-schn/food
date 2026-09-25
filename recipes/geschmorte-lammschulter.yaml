@@ -1,7 +1,11 @@
 id: geschmorte-lammschulter
-title: Geschmorte Lammschulter
-lang: de
-description: Wenig Aufwand, viel Würde. Der Ofen macht 90% der Arbeit.
+source_lang: de
+title:
+  de: Geschmorte Lammschulter
+  en: Braised Lamb Shoulder
+description:
+  de: Wenig Aufwand, viel Würde. Der Ofen macht 90% der Arbeit.
+  en: Low effort, high dignity. The oven does 90% of the work.
 source:
   type: adapted
   url: null
@@ -20,88 +24,161 @@ tags:
   season: []
   mood: [comfort, fancy]
 ingredients:
-  - id: lamm
-    name: Lammschulter mit Knochen
-    amount: 600
-    unit: g
-  - id: olivenoel
-    name: Olivenöl
-    amount: 2
-    unit: tbsp
-  - id: zwiebel
-    name: Zwiebel, grob gewürfelt
-    amount: 1
-    unit: piece
-  - id: karotten
-    name: Karotten, grob gewürfelt
-    amount: 2
-    unit: piece
-  - id: sellerie
-    name: Staudensellerie, grob gewürfelt
-    amount: 2
-    unit: piece
-  - id: knoblauch
-    name: Knoblauchzehen, ganz, leicht zerdrückt
-    amount: 5
-    unit: piece
-  - id: rotwein
-    name: kräftiger Rotwein, z.B. Lemberger oder Dornfelder
-    amount: 200
-    unit: ml
-  - id: fond
-    name: Lammfond oder Hühnerbrühe
-    amount: 250
-    unit: ml
-  - id: tomatenmark
-    name: Tomatenmark
-    amount: 1
-    unit: tbsp
-  - id: rosmarin
-    name: Rosmarinzweige
-    amount: 2
-    unit: piece
-  - id: thymian
-    name: Thymianzweige
-    amount: 3
-    unit: piece
-  - id: balsamico
-    name: Balsamico-Essig
-    amount: 1
-    unit: tbsp
-  - id: salz_pfeffer
-    name: Salz und schwarzer Pfeffer
-    amount: null
-    unit: to-taste
+- id: lamm
+  name:
+    de: Lammschulter mit Knochen
+    en: bone-in lamb shoulder
+  amount: 600
+  unit: g
+- id: olivenoel
+  name:
+    de: Olivenöl
+    en: olive oil
+  amount: 2
+  unit: tbsp
+- id: zwiebel
+  name:
+    de: Zwiebel, grob gewürfelt
+    en: onion, roughly diced
+  amount: 1
+  unit: piece
+- id: karotten
+  name:
+    de: Karotten, grob gewürfelt
+    en: carrots, roughly diced
+  amount: 2
+  unit: piece
+- id: sellerie
+  name:
+    de: Staudensellerie, grob gewürfelt
+    en: celery stalks, roughly diced
+  amount: 2
+  unit: piece
+- id: knoblauch
+  name:
+    de: Knoblauchzehen, ganz, leicht zerdrückt
+    en: garlic cloves, whole, lightly crushed
+  amount: 5
+  unit: piece
+- id: rotwein
+  name:
+    de: kräftiger Rotwein, z.B. Lemberger oder Dornfelder
+    en: full-bodied red wine, e.g. Lemberger or Dornfelder
+  amount: 200
+  unit: ml
+- id: fond
+  name:
+    de: Lammfond oder Hühnerbrühe
+    en: lamb stock or chicken stock
+  amount: 250
+  unit: ml
+- id: tomatenmark
+  name:
+    de: Tomatenmark
+    en: tomato paste
+  amount: 1
+  unit: tbsp
+- id: rosmarin
+  name:
+    de: Rosmarinzweige
+    en: rosemary sprigs
+  amount: 2
+  unit: piece
+- id: thymian
+  name:
+    de: Thymianzweige
+    en: thyme sprigs
+  amount: 3
+  unit: piece
+- id: balsamico
+  name:
+    de: Balsamico-Essig
+    en: balsamic vinegar
+  amount: 1
+  unit: tbsp
+- id: salz_pfeffer
+  name:
+    de: Salz und schwarzer Pfeffer
+    en: salt and black pepper
+  amount: null
+  unit: to-taste
 steps:
-  - title: Salzen und ruhen lassen
-    text: '{lamm} großzügig mit {salz_pfeffer} einreiben, abgedeckt 1-2 Stunden ruhen lassen, besser über Nacht im Kühlschrank.'
-    timer: 7200
-  - title: Ofen vorheizen
-    text: Ofen vorheizen (140°C wenn Umluft).
-    oven: {temp_c: 160, mode: ober-unter}
-  - title: Fleisch anbraten
-    text: '{olivenoel} im Schmortopf erhitzen. Fleisch trockentupfen, von allen Seiten je 2-3 Minuten scharf anbraten, herausnehmen.'
-    heat: 8
-    timer: 480
-  - title: Gemüse anschwitzen
-    text: '{zwiebel}, {karotten}, {sellerie} und {knoblauch} im selben Topf anschwitzen bis sie Farbe bekommen, {tomatenmark} kurz mitrösten.'
-    heat: 5
-    timer: 420
-  - title: Ablöschen
-    text: Mit {rotwein} ablöschen, Bratensatz lösen. {fond}, {balsamico}, {rosmarin} und {thymian} dazu.
-  - title: Schmoren
-    text: Fleisch zurück, halb in der Flüssigkeit. Deckel drauf, 4-5 Stunden in den Ofen, nach der Hälfte einmal wenden.
-    oven: {temp_c: 160, mode: ober-unter}
-    timer: 16200
-  - title: Sauce reduzieren
-    text: Fleisch rausnehmen und ruhen lassen. Sauce ohne Deckel sämig einkochen, abschmecken.
-    heat: 5
-    timer: 900
-  - title: Servieren
-    text: Fleisch mit Zangen zupfen, Sauce drüber. Dazu Kartoffelpüree oder gutes Brot.
-notes: >-
-  Einkauf: Metzger oder türkischer/arabischer Supermarkt, nach "Lammschulter mit Knochen" fragen.
-  Lammfond im Glas (Rewe/Kaufland) oder Hühnerbrühe.
-  Keule statt Schulter geht: weniger Fett, eher saftig-zart als zerfallend, nicht übergaren.
-  Keule mit Knochen 700-800g, 3-3,5h. Keule ohne Knochen 600-700g, 2,5-3h, nach 2,5h prüfen,
-  etwas mehr Fond oder eine Extra-Knoblauchzehe gleicht den fehlenden Knochen aus.
+- title:
+    de: Salzen und ruhen lassen
+    en: Salt and rest
+  text:
+    de: '{lamm} großzügig mit {salz_pfeffer} einreiben, abgedeckt 1-2 Stunden ruhen lassen, besser über
+      Nacht im Kühlschrank.'
+    en: Rub {lamm} generously with {salz_pfeffer}, rest covered for 1-2 hours, better overnight in the
+      fridge.
+  timer: 7200
+- title:
+    de: Ofen vorheizen
+    en: Preheat oven
+  text:
+    de: Ofen vorheizen (140°C wenn Umluft).
+    en: Preheat the oven (140°C if fan).
+  oven:
+    temp_c: 160
+    mode: ober-unter
+- title:
+    de: Fleisch anbraten
+    en: Sear the meat
+  text:
+    de: '{olivenoel} im Schmortopf erhitzen. Fleisch trockentupfen, von allen Seiten je 2-3 Minuten scharf
+      anbraten, herausnehmen.'
+    en: Heat {olivenoel} in a Dutch oven. Pat the meat dry, sear hard for 2-3 minutes per side, take it
+      out.
+  heat: 8
+  timer: 480
+- title:
+    de: Gemüse anschwitzen
+    en: Soften the veg
+  text:
+    de: '{zwiebel}, {karotten}, {sellerie} und {knoblauch} im selben Topf anschwitzen bis sie Farbe bekommen,
+      {tomatenmark} kurz mitrösten.'
+    en: Soften {zwiebel}, {karotten}, {sellerie} and {knoblauch} in the same pot until they take on color,
+      briefly toast {tomatenmark} with them.
+  heat: 5
+  timer: 420
+- title:
+    de: Ablöschen
+    en: Deglaze
+  text:
+    de: Mit {rotwein} ablöschen, Bratensatz lösen. {fond}, {balsamico}, {rosmarin} und {thymian} dazu.
+    en: Deglaze with {rotwein}, scrape up the fond. Add {fond}, {balsamico}, {rosmarin} and {thymian}.
+- title:
+    de: Schmoren
+    en: Braise
+  text:
+    de: Fleisch zurück, halb in der Flüssigkeit. Deckel drauf, 4-5 Stunden in den Ofen, nach der Hälfte
+      einmal wenden.
+    en: Meat back in, half submerged. Lid on, 4-5 hours in the oven, turn once halfway.
+  oven:
+    temp_c: 160
+    mode: ober-unter
+  timer: 16200
+- title:
+    de: Sauce reduzieren
+    en: Reduce the sauce
+  text:
+    de: Fleisch rausnehmen und ruhen lassen. Sauce ohne Deckel sämig einkochen, abschmecken.
+    en: Take the meat out to rest. Reduce the sauce uncovered until glossy, season.
+  heat: 5
+  timer: 900
+- title:
+    de: Servieren
+    en: Serve
+  text:
+    de: Fleisch mit Zangen zupfen, Sauce drüber. Dazu Kartoffelpüree oder gutes Brot.
+    en: Pull the meat apart with tongs, sauce over it. Serve with mashed potatoes or good bread.
+notes:
+  de: 'Einkauf: Metzger oder türkischer/arabischer Supermarkt, nach "Lammschulter mit Knochen" fragen.
+    Lammfond im Glas (Rewe/Kaufland) oder Hühnerbrühe. Keule statt Schulter geht: weniger Fett, eher saftig-zart
+    als zerfallend, nicht übergaren. Keule mit Knochen 700-800g, 3-3,5h. Keule ohne Knochen 600-700g,
+    2,5-3h, nach 2,5h prüfen, etwas mehr Fond oder eine Extra-Knoblauchzehe gleicht den fehlenden Knochen
+    aus.'
+  en: 'Shopping: butcher or Turkish/Arabic supermarket, ask for "Lammschulter mit Knochen". Lamb stock
+    in a jar (Rewe/Kaufland) or chicken stock. Leg instead of shoulder works: less fat, juicy-tender rather
+    than falling apart, don''t overcook. Bone-in leg 700-800g, 3-3.5h. Boneless leg 600-700g, 2.5-3h,
+    check at 2.5h, a bit more stock or an extra garlic clove makes up for the missing bone.'

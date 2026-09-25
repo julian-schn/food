@@ -1,7 +1,12 @@
 id: chicken-gnocchi-walnuts
-title: Creamy Chicken Gnocchi Skillet with Toasted Walnuts
-lang: en
-description: One-pan autumn dinner. Seared chicken, golden gnocchi, light cream sauce, crunchy walnuts.
+source_lang: en
+title:
+  de: Cremige Hähnchen-Gnocchi-Pfanne mit gerösteten Walnüssen
+  en: Creamy Chicken Gnocchi Skillet with Toasted Walnuts
+description:
+  de: Herbstliches One-Pan-Gericht. Angebratenes Hähnchen, goldene Gnocchi, leichte Sahnesoße, knackige
+    Walnüsse.
+  en: One-pan autumn dinner. Seared chicken, golden gnocchi, light cream sauce, crunchy walnuts.
 source:
   type: original
   url: null
@@ -20,53 +25,97 @@ tags:
   season: [autumn]
   mood: [comfort]
 ingredients:
-  - id: walnuts
-    name: walnuts
-    amount: 50
-    unit: g
-    substitute: cashews
-  - id: chicken
-    name: chicken breast, cut into pieces
-    amount: 400
-    unit: g
-  - id: oil
-    name: olive oil
-    amount: null
-    unit: to-taste
-  - id: gnocchi
-    name: gnocchi
-    amount: 500
-    unit: g
-  - id: garlic
-    name: garlic, minced
-    amount: null
-    unit: piece
-  - id: cream
-    name: cream
-    amount: 200
-    unit: ml
-  - id: herbs
-    name: fresh thyme or sage sprigs
-    amount: null
-    unit: to-taste
-  - id: salt_pepper
-    name: salt and pepper
-    amount: null
-    unit: to-taste
+- id: walnuts
+  name:
+    de: Walnüsse
+    en: walnuts
+  amount: 50
+  unit: g
+  substitute:
+    de: Cashews
+    en: cashews
+- id: chicken
+  name:
+    de: Hähnchenbrust, in Stücken
+    en: chicken breast, cut into pieces
+  amount: 400
+  unit: g
+- id: oil
+  name:
+    de: Olivenöl
+    en: olive oil
+  amount: null
+  unit: to-taste
+- id: gnocchi
+  name:
+    de: Gnocchi
+    en: gnocchi
+  amount: 500
+  unit: g
+- id: garlic
+  name:
+    de: Knoblauch, gehackt
+    en: garlic, minced
+  amount: null
+  unit: piece
+- id: cream
+  name:
+    de: Sahne
+    en: cream
+  amount: 200
+  unit: ml
+- id: herbs
+  name:
+    de: frische Thymian- oder Salbeizweige
+    en: fresh thyme or sage sprigs
+  amount: null
+  unit: to-taste
+- id: salt_pepper
+  name:
+    de: Salz und Pfeffer
+    en: salt and pepper
+  amount: null
+  unit: to-taste
 steps:
-  - title: Toast the nuts
-    text: Toast {walnuts} in a dry pan, stirring often, until light golden and fragrant. They rattle crisply when done. Watch them, golden to burnt is fast.
-    heat: 5
-    timer: 240
-  - title: Sear the chicken
-    text: Season {chicken} with {salt_pepper}, sear in {oil}.
-    heat: 8
-    timer: 300
-  - title: Gnocchi
-    text: Add {gnocchi} and {garlic} to the same pan and cook until golden.
-  - title: Sauce
-    text: Pour in {cream}, add {herbs}, simmer until thick.
-    heat: 4
-  - title: Serve
-    text: Fish out the bare herb stems, top with the toasted walnuts.
-notes: Servings estimated from quantities. Thyme can cook on the sprig, leaves fall off, remove stems before serving. Fresh garden thyme is stronger than dried, go easy.
+- title:
+    de: Nüsse rösten
+    en: Toast the nuts
+  text:
+    de: '{walnuts} in einer trockenen Pfanne unter häufigem Rühren hellgolden und duftend rösten. Fertig,
+      wenn sie knackig klappern. Dranbleiben, von golden zu verbrannt geht schnell.'
+    en: Toast {walnuts} in a dry pan, stirring often, until light golden and fragrant. They rattle crisply
+      when done. Watch them, golden to burnt is fast.
+  heat: 5
+  timer: 240
+- title:
+    de: Hähnchen anbraten
+    en: Sear the chicken
+  text:
+    de: '{chicken} mit {salt_pepper} würzen, in {oil} scharf anbraten.'
+    en: Season {chicken} with {salt_pepper}, sear in {oil}.
+  heat: 8
+  timer: 300
+- title:
+    de: Gnocchi
+    en: Gnocchi
+  text:
+    de: '{gnocchi} und {garlic} in dieselbe Pfanne geben und goldbraun braten.'
+    en: Add {gnocchi} and {garlic} to the same pan and cook until golden.
+- title:
+    de: Soße
+    en: Sauce
+  text:
+    de: '{cream} angießen, {herbs} dazu, köcheln lassen bis es eindickt.'
+    en: Pour in {cream}, add {herbs}, simmer until thick.
+  heat: 4
+- title:
+    de: Servieren
+    en: Serve
+  text:
+    de: Kahle Kräuterstiele rausfischen, mit den gerösteten Walnüssen toppen.
+    en: Fish out the bare herb stems, top with the toasted walnuts.
+notes:
+  de: Portionen aus den Mengen geschätzt. Thymian kann am Zweig mitgaren, die Blättchen fallen ab, Stiele
+    vor dem Servieren entfernen. Frischer Gartenthymian ist kräftiger als getrockneter, sparsam dosieren.
+  en: Servings estimated from quantities. Thyme can cook on the sprig, leaves fall off, remove stems before
+    serving. Fresh garden thyme is stronger than dried, go easy.

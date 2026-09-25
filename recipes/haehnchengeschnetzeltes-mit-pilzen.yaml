@@ -1,7 +1,11 @@
 id: haehnchengeschnetzeltes-mit-pilzen
-title: Hähnchengeschnetzeltes mit Pilzen
-lang: de
-description: Klassisches Geschnetzeltes in Sahnesoße, in 35 Minuten fertig.
+source_lang: de
+title:
+  de: Hähnchengeschnetzeltes mit Pilzen
+  en: Creamy Chicken and Mushroom Geschnetzeltes
+description:
+  de: Klassisches Geschnetzeltes in Sahnesoße, in 35 Minuten fertig.
+  en: Classic German sliced chicken in cream sauce, done in 35 minutes.
 source:
   type: web
   url: https://emmikochteinfach.de/haehnchengeschnetzeltes-mit-pilzen/
@@ -20,79 +24,141 @@ tags:
   season: []
   mood: [comfort]
 ingredients:
-  - id: haehnchen
-    name: Hähnchenbrustfilet
-    amount: 400
-    unit: g
-  - id: champignons
-    name: braune Champignons
-    amount: 250
-    unit: g
-  - id: sahne
-    name: Schlagsahne
-    amount: 250
-    unit: g
-  - id: fond
-    name: Geflügelfond
-    amount: 200
-    unit: ml
-  - id: zwiebel
-    name: Zwiebel
-    amount: 1
-    unit: piece
-  - id: knoblauch
-    name: Knoblauchzehe
-    amount: 1
-    unit: piece
-  - id: butterschmalz
-    name: Butterschmalz
-    amount: 2
-    unit: tbsp
-  - id: mehl
-    name: Mehl
-    amount: 1
-    unit: tbsp
-  - id: soja
-    name: Sojasoße
-    amount: 1
-    unit: tsp
-    optional: true
-  - id: gewuerze
-    name: Muskat, Salz, Pfeffer
-    amount: null
-    unit: to-taste
-  - id: petersilie
-    name: Petersilie
-    amount: null
-    unit: to-taste
+- id: haehnchen
+  name:
+    de: Hähnchenbrustfilet
+    en: chicken breast fillet
+  amount: 400
+  unit: g
+- id: champignons
+  name:
+    de: braune Champignons
+    en: brown mushrooms (cremini)
+  amount: 250
+  unit: g
+- id: sahne
+  name:
+    de: Schlagsahne
+    en: whipping cream
+  amount: 250
+  unit: g
+- id: fond
+  name:
+    de: Geflügelfond
+    en: chicken stock
+  amount: 200
+  unit: ml
+- id: zwiebel
+  name:
+    de: Zwiebel
+    en: onion
+  amount: 1
+  unit: piece
+- id: knoblauch
+  name:
+    de: Knoblauchzehe
+    en: garlic clove
+  amount: 1
+  unit: piece
+- id: butterschmalz
+  name:
+    de: Butterschmalz
+    en: clarified butter (Butterschmalz)
+  amount: 2
+  unit: tbsp
+- id: mehl
+  name:
+    de: Mehl
+    en: flour
+  amount: 1
+  unit: tbsp
+- id: soja
+  name:
+    de: Sojasoße
+    en: soy sauce
+  amount: 1
+  unit: tsp
+  optional: true
+- id: gewuerze
+  name:
+    de: Muskat, Salz, Pfeffer
+    en: nutmeg, salt, pepper
+  amount: null
+  unit: to-taste
+- id: petersilie
+  name:
+    de: Petersilie
+    en: parsley
+  amount: null
+  unit: to-taste
 steps:
-  - title: Vorbereitung
-    text: '{champignons} in 3 mm Scheiben, {zwiebel} in Streifen, {knoblauch} fein hacken. {haehnchen} trockentupfen, in 1 cm Streifen schneiden, leicht salzen.'
-  - title: Fleisch anbraten, 1. Portion
-    text: 1 EL {butterschmalz} erhitzen, erste Hälfte Hähnchen scharf anbraten, herausnehmen und warmhalten.
-    heat: 9
-    timer: 180
-  - title: Fleisch anbraten, 2. Portion
-    text: Zweite Hälfte genauso anbraten, pfeffern, beiseitestellen.
-    heat: 9
-    timer: 180
-  - title: Pilze und Zwiebeln
-    text: Restliches Butterschmalz in die Pfanne, Pilze, Zwiebel und Knoblauch rein, mit {mehl} bestäuben, dünsten.
-    heat: 6
-    timer: 120
-  - title: Ablöschen
-    text: Mit {fond} ablöschen, kurz aufkochen.
-    heat: 7
-    timer: 120
-  - title: Sahnesoße
-    text: '{sahne} dazu, köcheln und eindicken lassen.'
-    heat: 5
-    timer: 300
-  - title: Würzen
-    text: Mit {gewuerze} und {soja} abschmecken.
-    heat: 4
-  - title: Fertigstellen
-    text: Hähnchen samt Saft zurück in die Soße, 1-2 Minuten ziehen lassen, mit {petersilie} bestreuen.
-    heat: 3
-    timer: 120
-notes: Soße zu dünn? 1 TL Speisestärke in 1 TL Wasser, tröpfchenweise einrühren. Dazu Reis, Spätzle, Bandnudeln oder Rösti.
+- title:
+    de: Vorbereitung
+    en: Prep
+  text:
+    de: '{champignons} in 3 mm Scheiben, {zwiebel} in Streifen, {knoblauch} fein hacken. {haehnchen} trockentupfen,
+      in 1 cm Streifen schneiden, leicht salzen.'
+    en: Slice {champignons} 3 mm thick, cut {zwiebel} into strips, finely chop {knoblauch}. Pat {haehnchen}
+      dry, cut into 1 cm strips, salt lightly.
+- title:
+    de: Fleisch anbraten, 1. Portion
+    en: Sear the chicken, batch 1
+  text:
+    de: 1 EL {butterschmalz} erhitzen, erste Hälfte Hähnchen scharf anbraten, herausnehmen und warmhalten.
+    en: Heat 1 tbsp {butterschmalz}, sear the first half of the chicken hard, take out and keep warm.
+  heat: 9
+  timer: 180
+- title:
+    de: Fleisch anbraten, 2. Portion
+    en: Sear the chicken, batch 2
+  text:
+    de: Zweite Hälfte genauso anbraten, pfeffern, beiseitestellen.
+    en: Sear the second half the same way, add pepper, set aside.
+  heat: 9
+  timer: 180
+- title:
+    de: Pilze und Zwiebeln
+    en: Mushrooms and onions
+  text:
+    de: Restliches Butterschmalz in die Pfanne, Pilze, Zwiebel und Knoblauch rein, mit {mehl} bestäuben,
+      dünsten.
+    en: Rest of the clarified butter into the pan, add mushrooms, onion and garlic, dust with {mehl},
+      sweat.
+  heat: 6
+  timer: 120
+- title:
+    de: Ablöschen
+    en: Deglaze
+  text:
+    de: Mit {fond} ablöschen, kurz aufkochen.
+    en: Deglaze with {fond}, bring to a quick boil.
+  heat: 7
+  timer: 120
+- title:
+    de: Sahnesoße
+    en: Cream sauce
+  text:
+    de: '{sahne} dazu, köcheln und eindicken lassen.'
+    en: Add {sahne}, simmer until thickened.
+  heat: 5
+  timer: 300
+- title:
+    de: Würzen
+    en: Season
+  text:
+    de: Mit {gewuerze} und {soja} abschmecken.
+    en: Season with {gewuerze} and {soja}.
+  heat: 4
+- title:
+    de: Fertigstellen
+    en: Finish
+  text:
+    de: Hähnchen samt Saft zurück in die Soße, 1-2 Minuten ziehen lassen, mit {petersilie} bestreuen.
+    en: Chicken and its juices back into the sauce, let it sit 1-2 minutes, sprinkle with {petersilie}.
+  heat: 3
+  timer: 120
+notes:
+  de: Soße zu dünn? 1 TL Speisestärke in 1 TL Wasser, tröpfchenweise einrühren. Dazu Reis, Spätzle, Bandnudeln
+    oder Rösti.
+  en: Sauce too thin? Mix 1 tsp cornstarch with 1 tsp water, stir in drop by drop. Serve with rice, spätzle,
+    tagliatelle or rösti.
