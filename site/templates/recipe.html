@@ -22,7 +22,7 @@
   </header>
 
   <div class="recipe-body">
-  <section class="ingredients" aria-labelledby="ing-h">
+  <section class="ingredients panel" aria-labelledby="ing-h">
     <div class="section-head">
       <h2 id="ing-h">{{ tt("Zutaten", "Ingredients") }}</h2>
       <div class="scaler" data-base="{{ r.servings }}">
@@ -32,9 +32,6 @@
         <button type="button" data-step="1"><span aria-hidden="true">+</span><span class="visually-hidden">{{ tt("Eine Portion mehr", "One serving more") }}</span></button>
       </div>
     </div>
-    <p class="scale-note is-hidden" id="scale-note">
-      {{ tt("Mengen im Zubereitungstext sind nicht umgerechnet.", "Amounts in the step text aren't scaled.") }}
-    </p>
     {% for group, items in r._groups %}
       {% if group %}<h3>{{ t(group) }}</h3>{% endif %}
       <ul>
@@ -52,9 +49,12 @@
       {% endfor %}
       </ul>
     {% endfor %}
+    <p class="scale-note is-hidden" id="scale-note">
+      {{ tt("Mengen im Zubereitungstext sind nicht umgerechnet.", "Amounts in the step text aren't scaled.") }}
+    </p>
   </section>
 
-  <section class="steps" aria-labelledby="steps-h">
+  <section class="steps panel" aria-labelledby="steps-h">
     <h2 id="steps-h">{{ tt("Zubereitung", "Method") }}</h2>
     <ol>
     {% for s in r.steps %}

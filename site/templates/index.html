@@ -29,14 +29,14 @@
 
 <ul class="cards" id="cards">
 {% for c in cards %}
-  <li class="card" data-id="{{ c.id }}">
+  <li class="card panel" data-id="{{ c.id }}">
     <a href="r/{{ c.id }}/">
       <h2>{{ t(c.title) }}</h2>
       {% if c.description %}<p class="desc">{{ t(c.description) }}</p>{% endif %}
       <p class="meta">
-        <span>{{ c.time_total | minutes }}</span>
-        {% if c.rating %}<span aria-label="{{ c.rating }} / 5">★ {{ c.rating }}</span>{% endif %}
-        {% for tag in c.tags if tag.startswith("course:") or tag.startswith("cuisine:") %}<span class="tag">{{ tag | tag_label }}</span>{% endfor %}
+        <span class="timebox">{{ c.time_total | minutes }}</span>
+        {% if c.rating %}<span aria-label="{{ c.rating }} / 5">★&nbsp;{{ c.rating }}</span>{% endif %}
+        {% for tag in c.tags if tag.startswith("course:") or tag.startswith("cuisine:") %}<span>{{ tag | tag_label }}</span>{% endfor %}
       </p>
     </a>
   </li>
