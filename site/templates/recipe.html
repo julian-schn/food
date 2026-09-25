@@ -5,7 +5,11 @@
 {% block body_class %}page-recipe{% endblock %}
 {% block main %}
 <article class="recipe">
-  <header class="recipe-head">
+  <header class="recipe-head{% if r._art %} has-art{% endif %}">
+    {% if r._art %}
+    <figure class="art art-3x2"><img src="{{ root }}static/{{ r._art }}" alt="" decoding="async">{% include "_mark.html" %}</figure>
+    {% endif %}
+    <div class="head-text">
     <h1>{{ t(r.title) }}</h1>
     {% if r.description %}<p class="lede">{{ t(r.description) }}</p>{% endif %}
     <dl class="facts">
@@ -19,6 +23,7 @@
     <button type="button" class="cook-toggle" id="cook-toggle" aria-pressed="false">
       {{ tt("Kochmodus", "Cook mode") }}
     </button>
+    </div>
   </header>
 
   <div class="recipe-body">

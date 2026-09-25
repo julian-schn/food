@@ -7,6 +7,7 @@
 <title>{% block title %}Rezepte{% endblock %}</title>
 <meta name="description" content="{% block description %}Rezeptsammlung · recipe collection{% endblock %}">
 <meta name="color-scheme" content="light">
+{% if SITE_URL and social %}<meta property="og:image" content="{{ SITE_URL }}static/{{ social }}">{% endif %}
 <link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='4' height='4' fill='%231f4fe0'/><rect x='4' y='0' width='4' height='4' fill='%236b93ff'/><rect x='8' y='0' width='4' height='4' fill='%231f4fe0'/><rect x='0' y='4' width='4' height='4' fill='%236b93ff'/><rect x='4' y='4' width='4' height='4' fill='%231f4fe0'/><rect x='8' y='4' width='4' height='4' fill='%231f4fe0'/><rect x='0' y='8' width='4' height='4' fill='%231f4fe0'/><rect x='4' y='8' width='4' height='4' fill='%231f4fe0'/><rect x='8' y='8' width='4' height='4' fill='%236b93ff'/></svg>">
 <script>
   // Set the language before first paint so the other one never flashes.

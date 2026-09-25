@@ -3,6 +3,7 @@
 {% block body_class %}page-index{% endblock %}
 {% block main %}
 <h1 class="visually-hidden">{{ tt("Alle Rezepte", "All recipes") }}</h1>
+{% if banner %}<figure class="art art-3x1 banner"><img src="static/{{ banner }}" alt="" decoding="async">{% include "_mark.html" %}</figure>{% endif %}
 <section class="filters" aria-label="Filter">
   <label class="search">
     <span class="visually-hidden">{{ tt("Suchen", "Search") }}</span>
@@ -31,6 +32,7 @@
 {% for c in cards %}
   <li class="card panel" data-id="{{ c.id }}">
     <a href="r/{{ c.id }}/">
+      {% if c.art %}<div class="art art-3x1"><img src="static/{{ c.art }}" alt="" loading="lazy" decoding="async"></div>{% endif %}
       <h2>{{ t(c.title) }}</h2>
       {% if c.description %}<p class="desc">{{ t(c.description) }}</p>{% endif %}
       <p class="meta">
