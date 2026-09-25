@@ -106,7 +106,9 @@ html[data-lang="en"] [data-set-lang="en"] { background: var(--ink); color: var(-
 .cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
 /* Grid items won't shrink below their longest word by default; long German compounds need to. */
 .cards > li { min-width: 0; }
-.card h2, .recipe-head h1 { hyphens: auto; overflow-wrap: break-word; }
+.card h2, .recipe-head h1 { overflow-wrap: break-word; }
+/* Hyphenate only where columns are narrow; on wide screens it breaks words that would fit. */
+@media (max-width: 40rem) { .card h2, .recipe-head h1 { hyphens: auto; } }
 .card { display: flex; flex-direction: column; }
 /* Column flex so the meta row (time, rating, tags) sits at the bottom of equal-height cards. */
 .card a { display: flex; flex-direction: column; flex: 1; color: inherit; text-decoration: none; }
