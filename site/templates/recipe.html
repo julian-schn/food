@@ -83,7 +83,12 @@
   {% if r.notes %}
   <section class="notes" aria-labelledby="notes-h">
     <h2 id="notes-h">{{ tt("Notizen", "Notes") }}</h2>
-    {{ t(r.notes, "p") }}
+    {# A blank line in the YAML text starts a new paragraph. #}
+    {% for lang in ("de", "en") %}
+    <div class="notes-body l-{{ lang }}" lang="{{ lang }}">
+      {% for para in r.notes[lang].split("\n") if para.strip() %}<p>{{ para }}</p>{% endfor %}
+    </div>
+    {% endfor %}
   </section>
   {% endif %}
 

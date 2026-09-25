@@ -181,7 +181,8 @@ section { margin-top: 2rem; }
 @keyframes pulse { 50% { transform: scale(1.06); } }
 @media (prefers-reduced-motion: reduce) { .timer.done { animation: none; } .ingredients li { transition: none; } }
 
-.notes p { background: var(--surface); border-left: 3px solid var(--accent); padding: .8rem 1rem; border-radius: 0 var(--radius) var(--radius) 0; }
+.notes-body { background: var(--surface); border-left: 3px solid var(--accent); padding: .1rem 1rem; border-radius: 0 var(--radius) var(--radius) 0; }
+.notes-body p { margin: .7rem 0; }
 .log ul { list-style: none; padding: 0; }
 .log li { padding: .4rem 0; display: flex; flex-wrap: wrap; gap: .3rem .8rem; }
 .log time { color: var(--muted); font-variant-numeric: tabular-nums; }
