@@ -77,5 +77,29 @@
       "mood:comfort",
       "time:weeknight"
     ]
+  },
+  {
+    "id": "pot-roast-roemertopf",
+    "title": "Pot Roast (amerikanischer Rinderbraten) im Römertopf",
+    "lang": "de",
+    "file": "recipes/pot-roast-roemertopf.yaml",
+    "time_total": 240,
+    "tags": [
+      "course:main",
+      "cuisine:american",
+      "protein:beef",
+      "method:sear",
+      "method:braise",
+      "equipment:stovetop",
+      "equipment:oven",
+      "equipment:roemertopf",
+      "effort:medium",
+      "season:autumn",
+      "season:winter",
+      "mood:comfort",
+      "mood:crowd",
+      "mood:meal-prep",
+      "time:slow"
+    ]
   }
 ]
