@@ -176,7 +176,10 @@
   $$(".timer").forEach(function (btn) {
     var total = +btn.dataset.seconds, left = total, endAt = null, tick = null;
     var label = $(".timer-left", btn);
-    var stop = function () { clearInterval(tick); tick = null; btn.classList.remove("running"); };
+    var stop = function () {
+      clearInterval(tick); tick = null;
+      btn.classList.remove("running"); btn.setAttribute("aria-pressed", "false");
+    };
     btn.addEventListener("click", function () {
       if (btn.classList.contains("done")) {  // reset after finishing
         btn.classList.remove("done"); left = total; label.textContent = clock(left); return;
@@ -185,7 +188,7 @@
       if (audio && audio.state === "suspended") audio.resume();
       else if (!audio) { try { audio = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
       endAt = Date.now() + left * 1000;  // wall clock, so a backgrounded tab stays correct
-      btn.classList.add("running");
+      btn.classList.add("running"); btn.setAttribute("aria-pressed", "true");
       tick = setInterval(function () {
         left = Math.max(0, Math.round((endAt - Date.now()) / 1000));
         label.textContent = clock(left);

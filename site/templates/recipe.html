@@ -25,10 +25,10 @@
     <div class="section-head">
       <h2 id="ing-h">{{ tt("Zutaten", "Ingredients") }}</h2>
       <div class="scaler" data-base="{{ r.servings }}">
-        <button type="button" data-step="-1" aria-label="−1">−</button>
+        <button type="button" data-step="-1"><span aria-hidden="true">−</span><span class="visually-hidden">{{ tt("Eine Portion weniger", "One serving fewer") }}</span></button>
         <output id="servings" aria-live="polite">{{ r.servings }}</output>
         <span>{{ tt("Portionen", "servings") }}</span>
-        <button type="button" data-step="1" aria-label="+1">+</button>
+        <button type="button" data-step="1"><span aria-hidden="true">+</span><span class="visually-hidden">{{ tt("Eine Portion mehr", "One serving more") }}</span></button>
       </div>
     </div>
     <p class="scale-note" id="scale-note" hidden>
@@ -58,7 +58,7 @@
     <ol>
     {% for s in r.steps %}
       <li class="step">
-        <label class="step-done"><input type="checkbox"><span class="visually-hidden">{{ tt("Erledigt", "Done") }}</span></label>
+        <label class="step-done"><input type="checkbox"><span class="visually-hidden">{{ tt("Schritt %d erledigt" % loop.index, "Step %d done" % loop.index) }}</span></label>
         <div class="step-body">
           <h3>{{ t(s.title) }}</h3>
           {% if s.heat or s.oven %}
@@ -70,8 +70,8 @@
           <p class="l-de" lang="de">{{ s.text.de | refs(r._ings, "de") }}</p>
           <p class="l-en" lang="en">{{ s.text.en | refs(r._ings, "en") }}</p>
           {% if s.timer %}
-          <button type="button" class="timer" data-seconds="{{ s.timer }}">
-            <span class="timer-icon" aria-hidden="true">⏱</span> <span class="timer-left">{{ s.timer | timer }}</span>
+          <button type="button" class="timer" data-seconds="{{ s.timer }}" aria-pressed="false">
+            <span class="timer-icon" aria-hidden="true">⏱</span> <span class="visually-hidden">Timer</span> <span class="timer-left">{{ s.timer | timer }}</span>
           </button>
           {% endif %}
         </div>
