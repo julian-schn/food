@@ -40,6 +40,27 @@
     ]
   },
   {
+    "id": "geschmorte-lammschulter",
+    "title": "Geschmorte Lammschulter",
+    "lang": "de",
+    "file": "recipes/geschmorte-lammschulter.yaml",
+    "time_total": 300,
+    "tags": [
+      "course:main",
+      "cuisine:mediterranean",
+      "protein:lamb",
+      "method:sear",
+      "method:braise",
+      "equipment:stovetop",
+      "equipment:oven",
+      "equipment:dutch-oven",
+      "effort:medium",
+      "mood:comfort",
+      "mood:fancy",
+      "time:slow"
+    ]
+  },
+  {
     "id": "haehnchengeschnetzeltes-mit-pilzen",
     "title": "Hähnchengeschnetzeltes mit Pilzen",
     "lang": "de",

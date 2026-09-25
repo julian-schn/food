@@ -1,0 +1,107 @@
+id: geschmorte-lammschulter
+title: Geschmorte Lammschulter
+lang: de
+description: Wenig Aufwand, viel Würde. Der Ofen macht 90% der Arbeit.
+source:
+  type: adapted
+  url: null
+  credit: claude chat, zusammengestellt aus mehreren Schmorrezepten
+servings: 1
+time:
+  active: 30
+  passive: 270
+tags:
+  course: [main]
+  cuisine: [mediterranean]
+  protein: [lamb]
+  method: [sear, braise]
+  equipment: [stovetop, oven, dutch-oven]
+  effort: medium
+  season: []
+  mood: [comfort, fancy]
+ingredients:
+  - id: lamm
+    name: Lammschulter mit Knochen
+    amount: 600
+    unit: g
+  - id: olivenoel
+    name: Olivenöl
+    amount: 2
+    unit: tbsp
+  - id: zwiebel
+    name: Zwiebel, grob gewürfelt
+    amount: 1
+    unit: piece
+  - id: karotten
+    name: Karotten, grob gewürfelt
+    amount: 2
+    unit: piece
+  - id: sellerie
+    name: Staudensellerie, grob gewürfelt
+    amount: 2
+    unit: piece
+  - id: knoblauch
+    name: Knoblauchzehen, ganz, leicht zerdrückt
+    amount: 5
+    unit: piece
+  - id: rotwein
+    name: kräftiger Rotwein, z.B. Lemberger oder Dornfelder
+    amount: 200
+    unit: ml
+  - id: fond
+    name: Lammfond oder Hühnerbrühe
+    amount: 250
+    unit: ml
+  - id: tomatenmark
+    name: Tomatenmark
+    amount: 1
+    unit: tbsp
+  - id: rosmarin
+    name: Rosmarinzweige
+    amount: 2
+    unit: piece
+  - id: thymian
+    name: Thymianzweige
+    amount: 3
+    unit: piece
+  - id: balsamico
+    name: Balsamico-Essig
+    amount: 1
+    unit: tbsp
+  - id: salz_pfeffer
+    name: Salz und schwarzer Pfeffer
+    amount: null
+    unit: to-taste
+steps:
+  - title: Salzen und ruhen lassen
+    text: '{lamm} großzügig mit {salz_pfeffer} einreiben, abgedeckt 1-2 Stunden ruhen lassen, besser über Nacht im Kühlschrank.'
+    timer: 7200
+  - title: Ofen vorheizen
+    text: Ofen vorheizen (140°C wenn Umluft).
+    oven: {temp_c: 160, mode: ober-unter}
+  - title: Fleisch anbraten
+    text: '{olivenoel} im Schmortopf erhitzen. Fleisch trockentupfen, von allen Seiten je 2-3 Minuten scharf anbraten, herausnehmen.'
+    heat: 8
+    timer: 480
+  - title: Gemüse anschwitzen
+    text: '{zwiebel}, {karotten}, {sellerie} und {knoblauch} im selben Topf anschwitzen bis sie Farbe bekommen, {tomatenmark} kurz mitrösten.'
+    heat: 5
+    timer: 420
+  - title: Ablöschen
+    text: Mit {rotwein} ablöschen, Bratensatz lösen. {fond}, {balsamico}, {rosmarin} und {thymian} dazu.
+  - title: Schmoren
+    text: Fleisch zurück, halb in der Flüssigkeit. Deckel drauf, 4-5 Stunden in den Ofen, nach der Hälfte einmal wenden.
+    oven: {temp_c: 160, mode: ober-unter}
+    timer: 16200
+  - title: Sauce reduzieren
+    text: Fleisch rausnehmen und ruhen lassen. Sauce ohne Deckel sämig einkochen, abschmecken.
+    heat: 5
+    timer: 900
+  - title: Servieren
+    text: Fleisch mit Zangen zupfen, Sauce drüber. Dazu Kartoffelpüree oder gutes Brot.
+notes: >-
+  Einkauf: Metzger oder türkischer/arabischer Supermarkt, nach "Lammschulter mit Knochen" fragen.
+  Lammfond im Glas (Rewe/Kaufland) oder Hühnerbrühe.
+  Keule statt Schulter geht: weniger Fett, eher saftig-zart als zerfallend, nicht übergaren.
+  Keule mit Knochen 700-800g, 3-3,5h. Keule ohne Knochen 600-700g, 2,5-3h, nach 2,5h prüfen,
+  etwas mehr Fond oder eine Extra-Knoblauchzehe gleicht den fehlenden Knochen aus.
