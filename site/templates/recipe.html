@@ -21,6 +21,7 @@
     </button>
   </header>
 
+  <div class="recipe-body">
   <section class="ingredients" aria-labelledby="ing-h">
     <div class="section-head">
       <h2 id="ing-h">{{ tt("Zutaten", "Ingredients") }}</h2>
@@ -79,6 +80,7 @@
     {% endfor %}
     </ol>
   </section>
+  </div>
 
   {% if r.notes %}
   <section class="notes" aria-labelledby="notes-h">

@@ -89,6 +89,15 @@
     });
   });
 
+  // --- recipe: sticky ingredients only when the whole list fits on screen --
+  var ingBox = $(".ingredients");
+  var fitIngredients = function () {
+    if (ingBox) ingBox.classList.toggle("fits", ingBox.offsetHeight <= window.innerHeight - 32);
+  };
+  window.addEventListener("resize", fitIngredients);
+  document.addEventListener("langchange", fitIngredients);
+  fitIngredients();
+
   // --- recipe: servings scaler --------------------------------------------
   var scaler = $(".scaler");
   if (scaler) {
@@ -127,6 +136,7 @@
       b.addEventListener("click", function () {
         servings = Math.max(1, servings + +b.dataset.step);
         rescale();
+        fitIngredients();
       });
     });
   }
@@ -142,6 +152,7 @@
       var on = !document.body.classList.contains("cooking");
       document.body.classList.toggle("cooking", on);
       cookBtn.setAttribute("aria-pressed", on);
+      fitIngredients();
       if (on) requestLock();
       else if (wakeLock) { wakeLock.release(); wakeLock = null; }
     });

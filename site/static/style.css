@@ -198,9 +198,9 @@ body.cooking .step { padding: 1.3rem 0; }
 @media (min-width: 52rem) {
   main { max-width: 64rem; }
   .site-header { max-width: 64rem; }
-  .recipe { display: grid; grid-template-columns: 22rem 1fr; gap: 0 3rem; }
-  .recipe-head, .notes, .log, .source { grid-column: 1 / -1; }
-  .ingredients { position: sticky; top: 1rem; align-self: start; }
+  /* The sticky list's containing block is .recipe-body, so it can't slide over the notes below. */
+  .recipe-body { display: grid; grid-template-columns: 22rem 1fr; gap: 0 3rem; align-items: start; }
+  .ingredients.fits { position: sticky; top: 1rem; }  /* only when it fits the screen, see app.js */
   .ingredients li { grid-template-columns: 5.5rem 1fr; }
   .cards { grid-template-columns: repeat(2, 1fr); }
 }
