@@ -38,5 +38,23 @@
       "mood:comfort",
       "time:quick"
     ]
+  },
+  {
+    "id": "haehnchengeschnetzeltes-mit-pilzen",
+    "title": "Hähnchengeschnetzeltes mit Pilzen",
+    "lang": "de",
+    "file": "recipes/haehnchengeschnetzeltes-mit-pilzen.yaml",
+    "time_total": 35,
+    "tags": [
+      "course:main",
+      "cuisine:german",
+      "protein:chicken",
+      "method:sear",
+      "method:simmer",
+      "equipment:stovetop",
+      "effort:low",
+      "mood:comfort",
+      "time:weeknight"
+    ]
   }
 ]

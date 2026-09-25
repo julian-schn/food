@@ -1,0 +1,98 @@
+id: haehnchengeschnetzeltes-mit-pilzen
+title: Hähnchengeschnetzeltes mit Pilzen
+lang: de
+description: Klassisches Geschnetzeltes in Sahnesoße, in 35 Minuten fertig.
+source:
+  type: web
+  url: https://emmikochteinfach.de/haehnchengeschnetzeltes-mit-pilzen/
+  credit: Emmi kocht einfach
+servings: 4
+time:
+  active: 35
+  passive: 0
+tags:
+  course: [main]
+  cuisine: [german]
+  protein: [chicken]
+  method: [sear, simmer]
+  equipment: [stovetop]
+  effort: low
+  season: []
+  mood: [comfort]
+ingredients:
+  - id: haehnchen
+    name: Hähnchenbrustfilet
+    amount: 400
+    unit: g
+  - id: champignons
+    name: braune Champignons
+    amount: 250
+    unit: g
+  - id: sahne
+    name: Schlagsahne
+    amount: 250
+    unit: g
+  - id: fond
+    name: Geflügelfond
+    amount: 200
+    unit: ml
+  - id: zwiebel
+    name: Zwiebel
+    amount: 1
+    unit: piece
+  - id: knoblauch
+    name: Knoblauchzehe
+    amount: 1
+    unit: piece
+  - id: butterschmalz
+    name: Butterschmalz
+    amount: 2
+    unit: tbsp
+  - id: mehl
+    name: Mehl
+    amount: 1
+    unit: tbsp
+  - id: soja
+    name: Sojasoße
+    amount: 1
+    unit: tsp
+    optional: true
+  - id: gewuerze
+    name: Muskat, Salz, Pfeffer
+    amount: null
+    unit: to-taste
+  - id: petersilie
+    name: Petersilie
+    amount: null
+    unit: to-taste
+steps:
+  - title: Vorbereitung
+    text: '{champignons} in 3 mm Scheiben, {zwiebel} in Streifen, {knoblauch} fein hacken. {haehnchen} trockentupfen, in 1 cm Streifen schneiden, leicht salzen.'
+  - title: Fleisch anbraten, 1. Portion
+    text: 1 EL {butterschmalz} erhitzen, erste Hälfte Hähnchen scharf anbraten, herausnehmen und warmhalten.
+    heat: 9
+    timer: 180
+  - title: Fleisch anbraten, 2. Portion
+    text: Zweite Hälfte genauso anbraten, pfeffern, beiseitestellen.
+    heat: 9
+    timer: 180
+  - title: Pilze und Zwiebeln
+    text: Restliches Butterschmalz in die Pfanne, Pilze, Zwiebel und Knoblauch rein, mit {mehl} bestäuben, dünsten.
+    heat: 6
+    timer: 120
+  - title: Ablöschen
+    text: Mit {fond} ablöschen, kurz aufkochen.
+    heat: 7
+    timer: 120
+  - title: Sahnesoße
+    text: '{sahne} dazu, köcheln und eindicken lassen.'
+    heat: 5
+    timer: 300
+  - title: Würzen
+    text: Mit {gewuerze} und {soja} abschmecken.
+    heat: 4
+  - title: Fertigstellen
+    text: Hähnchen samt Saft zurück in die Soße, 1-2 Minuten ziehen lassen, mit {petersilie} bestreuen.
+    heat: 3
+    timer: 120
+notes: Soße zu dünn? 1 TL Speisestärke in 1 TL Wasser, tröpfchenweise einrühren. Dazu Reis, Spätzle, Bandnudeln oder Rösti.
