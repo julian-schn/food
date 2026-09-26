@@ -1,0 +1,204 @@
+id: russischer-zupfkuchen
+source_lang: de
+title:
+  de: Russischer Zupfkuchen
+  en: Russian Pluck Cake (Russischer Zupfkuchen)
+description:
+  de: Schokoladen-Mürbeteig mit Quarkfüllung und gezupften Teigstücken obendrauf.
+  en: Chocolate shortcrust with a quark filling and plucked pieces of dough on top.
+source:
+  type: adapted
+  url: https://www.chefkoch.de/rezepte/2498141392476196/Russischer-Zupfkuchen-fuer-den-Thermomix.html
+  credit: Bellanna (Chefkoch)
+servings: 12
+time:
+  active: 30
+  passive: 60
+tags:
+  course: [baking, dessert]
+  cuisine: [german]
+  protein: [none]
+  method: [bake]
+  equipment: [oven]
+  effort: low
+  season: []
+  mood: [crowd, comfort]
+ingredients:
+- id: butter_teig
+  name:
+    de: Butter, in Stücken
+    en: butter, in pieces
+  amount: 200
+  unit: g
+  group:
+    de: Teig
+    en: Dough
+- id: zucker_teig
+  name:
+    de: Zucker
+    en: sugar
+  amount: 150
+  unit: g
+  group:
+    de: Teig
+    en: Dough
+- id: mehl
+  name:
+    de: Weizenmehl Type 405
+    en: all-purpose flour
+  amount: 350
+  unit: g
+  group:
+    de: Teig
+    en: Dough
+- id: kakao
+  name:
+    de: Kakaopulver
+    en: cocoa powder
+  amount: 30
+  unit: g
+  group:
+    de: Teig
+    en: Dough
+- id: backpulver
+  name:
+    de: Backpulver
+    en: baking powder
+  amount: 15
+  unit: g
+  group:
+    de: Teig
+    en: Dough
+- id: ei
+  name:
+    de: Ei
+    en: egg
+  amount: 1
+  unit: piece
+  group:
+    de: Teig
+    en: Dough
+- id: butter_fuellung
+  name:
+    de: Butter, weich, in Stücken
+    en: butter, soft, in pieces
+  amount: 180
+  unit: g
+  group:
+    de: Füllung
+    en: Filling
+- id: zucker_fuellung
+  name:
+    de: Zucker
+    en: sugar
+  amount: 200
+  unit: g
+  group:
+    de: Füllung
+    en: Filling
+- id: eier
+  name:
+    de: Eier
+    en: eggs
+  amount: 4
+  unit: piece
+  group:
+    de: Füllung
+    en: Filling
+- id: quark
+  name:
+    de: Magerquark
+    en: quark (Magerquark, low-fat)
+  amount: 500
+  unit: g
+  group:
+    de: Füllung
+    en: Filling
+- id: vanillinzucker
+  name:
+    de: Vanillinzucker
+    en: vanilla sugar (Vanillinzucker)
+  amount: 8
+  unit: g
+  group:
+    de: Füllung
+    en: Filling
+- id: puddingpulver
+  name:
+    de: Vanillepuddingpulver
+    en: vanilla pudding powder (Vanillepuddingpulver)
+  amount: 37
+  unit: g
+  group:
+    de: Füllung
+    en: Filling
+steps:
+- title:
+    de: Vorbereiten
+    en: Prep
+  text:
+    de: Springform (26 cm) mit Backpapier auslegen, Backofen vorheizen.
+    en: Line a 26 cm springform with baking paper, preheat the oven.
+  oven:
+    temp_c: 180
+    mode: ober-unter
+- title:
+    de: Teig kneten
+    en: Make the dough
+  text:
+    de: '{butter_teig}, {zucker_teig}, {mehl}, {kakao}, {backpulver} und {ei} mit den Knethaken des Handrührgeräts
+      verrühren, dann kurz mit den Händen zu einem glatten Teig verkneten.'
+    en: Mix {butter_teig}, {zucker_teig}, {mehl}, {kakao}, {backpulver} and {ei} with the dough hooks of a
+      hand mixer, then knead briefly by hand into a smooth dough.
+- title:
+    de: Boden formen
+    en: Form the base
+  text:
+    de: Zwei Drittel des Teigs in die Form drücken und dabei einen Rand hochziehen.
+    en: Press two thirds of the dough into the form, pulling up a rim as you go.
+- title:
+    de: Füllung
+    en: Filling
+  text:
+    de: '{butter_fuellung} und {zucker_fuellung} mit den Rührbesen cremig schlagen. {eier} einzeln unterrühren,
+      dann {quark}, {vanillinzucker} und {puddingpulver} glatt einrühren. Die Füllung auf den Boden geben.'
+    en: Beat {butter_fuellung} and {zucker_fuellung} with the whisks until creamy. Beat in {eier} one at a
+      time, then stir in {quark}, {vanillinzucker} and {puddingpulver} until smooth. Pour the filling onto
+      the base.
+- title:
+    de: Zupfen
+    en: Pluck
+  text:
+    de: Den restlichen Teig in kleine Stücke zupfen und auf der Füllung verteilen.
+    en: Pluck the rest of the dough into small pieces and scatter them over the filling.
+- title:
+    de: Backen
+    en: Bake
+  text:
+    de: Im vorgeheizten Ofen ca. 60 Minuten backen.
+    en: Bake in the preheated oven for about 60 minutes.
+  oven:
+    temp_c: 180
+    mode: ober-unter
+  timer: 3600
+notes:
+  de: >-
+    Original für den Thermomix (Teig 30 Sek./Stufe 6, Füllung 40 Sek./Stufe 5), hier auf Handrührgerät
+    umgeschrieben. Backpulver, Vanillinzucker und Puddingpulver im Original je 1 Päckchen, hier als
+    Standard-Päckchengewicht in Gramm (15 g, 8 g, 37 g).
+
+    Das Original sagt nur "180°": Ober-/Unterhitze angenommen, mit Umluft etwa 160 °C. Die Größe der
+    Springform steht nicht im Original, 26 cm angenommen.
+
+    Nicht aus dem Original: vor dem Anschneiden vollständig in der Form auskühlen lassen, warm ist die
+    Füllung noch zu weich.
+  en: >-
+    The original is for the Thermomix (dough 30 sec/speed 6, filling 40 sec/speed 5), rewritten here for
+    a hand mixer. Baking powder, vanilla sugar and pudding powder are 1 packet each in the original, given
+    here as the standard German packet weight in grams (15 g, 8 g, 37 g).
+
+    The original only says "180°": conventional heat (Ober-/Unterhitze) assumed, about 160 °C with fan.
+    The springform size isn't in the original, 26 cm assumed.
+
+    Not from the original: let it cool completely in the form before cutting, the filling is still too
+    soft while warm.
