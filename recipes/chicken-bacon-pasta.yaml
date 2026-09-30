@@ -1,0 +1,205 @@
+id: chicken-bacon-pasta
+source_lang: en
+title:
+  de: Cremige Hähnchen-Bacon-Pasta
+  en: Creamy Chicken and Bacon Pasta
+description:
+  de: Uncle Phils Pastaauflauf ohne Ofen, in einer cremigen Käsesoße mit Mehlschwitze. Ohne Sardellen, ohne Knoblauchbrösel.
+  en: Uncle Phil's pasta bake, minus the oven, in a creamy roux-thickened three-cheese sauce. No anchovies, no garlic crumbs.
+source:
+  type: adapted
+  url: https://www.dontgobaconmyheart.co.uk/chicken-bacon-pasta-bake/
+  credit: Don't Go Bacon My Heart (Chris Collins)
+servings: 5
+time:
+  active: 40
+  passive: 0
+tags:
+  course: [main]
+  cuisine: [british]
+  protein: [chicken, pork]
+  method: [fry, boil, simmer]
+  equipment: [stovetop]
+  effort: low
+  season: [autumn, winter]
+  mood: [comfort, crowd]
+ingredients:
+- id: bacon
+  name:
+    de: Frühstücksspeck (Bacon), geräuchert, gewürfelt
+    en: smoked streaky bacon, diced
+  amount: 250
+  unit: g
+- id: zwiebel
+  name:
+    de: Zwiebel
+    en: white onion
+  amount: 1
+  unit: piece
+- id: knoblauch
+  name:
+    de: Knoblauchzehe
+    en: garlic clove
+  amount: 2
+  unit: piece
+- id: penne
+  name:
+    de: Penne
+    en: penne
+  amount: 400
+  unit: g
+  substitute:
+    de: jede kurze Nudelsorte
+    en: any short pasta
+- id: butter
+  name:
+    de: Butter
+    en: butter
+  amount: 60
+  unit: g
+- id: mehl
+  name:
+    de: Weizenmehl Type 405
+    en: plain flour
+  amount: 60
+  unit: g
+- id: bruehe
+  name:
+    de: Hühnerbrühe
+    en: chicken stock
+  amount: 400
+  unit: ml
+- id: milch
+  name:
+    de: Milch
+    en: milk
+  amount: 480
+  unit: ml
+- id: sahne
+  name:
+    de: Schlagsahne
+    en: double cream
+  amount: 120
+  unit: ml
+- id: senf
+  name:
+    de: Dijonsenf
+    en: Dijon mustard
+  amount: 1
+  unit: tsp
+- id: pfeffer
+  name:
+    de: weißer Pfeffer
+    en: white pepper
+  amount: 0.25
+  unit: tsp
+- id: salz
+  name:
+    de: Salz
+    en: salt
+  amount: null
+  unit: to-taste
+- id: cheddar
+  name:
+    de: Cheddar, gerieben
+    en: cheddar, grated
+  amount: 150
+  unit: g
+- id: mozzarella
+  name:
+    de: Mozzarella, gerieben
+    en: mozzarella, shredded
+  amount: 50
+  unit: g
+- id: parmesan
+  name:
+    de: Parmesan, frisch gerieben
+    en: parmesan, freshly grated
+  amount: 80
+  unit: g
+- id: haehnchen
+  name:
+    de: gegartes Hähnchen (z. B. Brathähnchen), gewürfelt
+    en: cooked chicken (e.g. rotisserie), diced
+  amount: 300
+  unit: g
+- id: nudelwasser
+  name:
+    de: Nudelwasser
+    en: pasta water
+  amount: null
+  unit: to-taste
+  optional: true
+steps:
+- title:
+    de: Vorbereitung
+    en: Prep
+  text:
+    de: "{zwiebel} und {knoblauch} fein würfeln. {cheddar}, {mozzarella} und {parmesan} reiben, {haehnchen} würfeln."
+    en: "Finely dice {zwiebel} and {knoblauch}. Grate {cheddar}, {mozzarella} and {parmesan}, dice {haehnchen}."
+- title:
+    de: Bacon auslassen
+    en: Render the bacon
+  text:
+    de: "{bacon} in einem großen, tiefen Topf langsam knusprig braten, bis das Fett ausgelassen ist. Bacon herausnehmen, Fett im Topf lassen."
+    en: "Cook {bacon} slowly in a large deep pan until crisp and the fat has fully rendered. Take the bacon out, leave the fat in."
+  heat: 5
+  timer: 720
+- title:
+    de: Zwiebel und Knoblauch
+    en: Onion and garlic
+  text:
+    de: "{zwiebel} im Baconfett weich und goldbraun braten, dann {knoblauch} eine Minute mitbraten."
+    en: "Fry {zwiebel} in the bacon fat until soft and golden, then add {knoblauch} for another minute."
+  heat: 5
+  timer: 480
+- title:
+    de: Nudeln kochen
+    en: Cook the pasta
+  text:
+    de: "Parallel {penne} in Salzwasser al dente kochen. Vor dem Abgießen eine Tasse {nudelwasser} aufheben."
+    en: "Meanwhile, cook {penne} in salted water until al dente. Save a mug of {nudelwasser} before draining."
+  heat: 9
+- title:
+    de: Mehlschwitze
+    en: Roux
+  text:
+    de: "{butter} im Topf schmelzen, {mehl} einrühren und eine Minute anschwitzen."
+    en: "Melt {butter} in the pan, stir in {mehl} and cook for a minute."
+  heat: 4
+  timer: 60
+- title:
+    de: Soße
+    en: Sauce
+  text:
+    de: "Nach und nach {bruehe}, {milch} und {sahne} einrühren, dabei klumpenfrei schlagen. {senf} und {pfeffer} dazu, köcheln lassen, bis die Soße einen Löffel überzieht."
+    en: "Gradually whisk in {bruehe}, {milch} and {sahne} so no lumps form. Add {senf} and {pfeffer}, simmer until the sauce coats a spoon."
+  heat: 4
+  timer: 240
+- title:
+    de: Käse
+    en: Cheese
+  text:
+    de: "Herd aus. {cheddar}, {mozzarella} und {parmesan} einrühren, bis alles glatt geschmolzen ist. Mit {salz} abschmecken."
+    en: "Heat off. Stir in {cheddar}, {mozzarella} and {parmesan} until smooth. Season with {salz}."
+- title:
+    de: Fertigstellen
+    en: Finish
+  text:
+    de: "{penne}, {haehnchen} und den Bacon unterheben. Zu dick? Mit etwas {nudelwasser} lockern."
+    en: "Fold in {penne}, {haehnchen} and the bacon. Too thick? Loosen with a splash of {nudelwasser}."
+  heat: 2
+  timer: 120
+notes:
+  de: >-
+    Original in Cups, umgerechnet. Original ist ein Auflauf (20 Min. bei 200 °C) mit Sardellen und Knoblauchbrot-Bröseln; hier ohne Ofen, ohne Sardellen, Brühe von 480 auf 400 ml reduziert, weil die Soße im Topf nicht mehr eindickt. Ohne Sardellen fehlt Salz, also am Ende abschmecken.
+
+    Knusprig? Etwas Bacon zum Bestreuen zurückbehalten oder eine Handvoll Semmelbrösel mit Butter und Knoblauch 2 Minuten in der Pfanne rösten.
+
+    Reste luftdicht im Kühlschrank ein paar Tage haltbar, mit einem Schuss Milch durcherhitzen.
+  en: >-
+    Original in cups, converted. The original is a bake (20 min at 200 °C) with anchovies and garlic bread crumbs; here no oven, no anchovies, stock cut from 480 to 400 ml since the sauce no longer reduces in the oven. Without anchovies it needs salt, so season at the end.
+
+    Want crunch? Hold back some bacon for the top, or toast a handful of breadcrumbs with butter and garlic in a pan for 2 minutes.
+
+    Leftovers keep a few days in an airtight container in the fridge; reheat with a splash of milk.
