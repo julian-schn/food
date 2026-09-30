@@ -24,6 +24,32 @@
     ]
   },
   {
+    "id": "chicken-bacon-pasta",
+    "title": {
+      "de": "Cremige Hähnchen-Bacon-Pasta",
+      "en": "Creamy Chicken and Bacon Pasta"
+    },
+    "source_lang": "en",
+    "file": "recipes/chicken-bacon-pasta.yaml",
+    "time_total": 40,
+    "tags": [
+      "course:main",
+      "cuisine:british",
+      "protein:chicken",
+      "protein:pork",
+      "method:fry",
+      "method:boil",
+      "method:simmer",
+      "equipment:stovetop",
+      "effort:low",
+      "season:autumn",
+      "season:winter",
+      "mood:comfort",
+      "mood:crowd",
+      "time:weeknight"
+    ]
+  },
+  {
     "id": "chicken-gnocchi-walnuts",
     "title": {
       "de": "Cremige Hähnchen-Gnocchi-Pfanne mit gerösteten Walnüssen",
