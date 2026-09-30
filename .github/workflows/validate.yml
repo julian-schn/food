@@ -3,9 +3,24 @@ on: [push, pull_request]
 jobs:
   validate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
-      - run: python scripts/build_index.py --check
+      # PRs and other branches: index.json must already be up to date.
+      - if: github.ref != 'refs/heads/main' || github.event_name != 'push'
+        run: python scripts/build_index.py --check
+      # main: validate, then commit the rebuilt index so recipes uploaded via the web UI just work.
+      # Pushes made with GITHUB_TOKEN don't trigger workflows, so this can't loop.
+      - if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          python scripts/build_index.py
+          git diff --quiet index.json && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(index): rebuild" index.json
+          git pull --rebase
+          git push

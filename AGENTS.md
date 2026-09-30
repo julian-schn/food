@@ -5,6 +5,7 @@
 - `tags.yaml` controlled tag vocabulary
 - `schema/recipe.schema.json` the contract
 - `index.json` generated, never edit by hand
+  (if a push to `main` leaves it stale, e.g. a web upload, CI commits the rebuild; `git pull` before pushing)
 - `site/` templates and static assets for the GitHub Pages site. `scripts/build_site.py`
   renders it into `_site/` (generated, never committed; CI builds and deploys it on push to `main`)
 
