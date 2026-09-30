@@ -75,19 +75,51 @@
     fromHash();
   }
 
-  // --- recipe: ingredient highlight ---------------------------------------
+  // --- recipe: ingredient highlight + amount popover ----------------------
   var highlight = function (id, on) {
     $$('[data-ing="' + id + '"]').forEach(function (el) { el.classList.toggle("hl", on); });
   };
+  // Copies the list row's current (possibly scaled) amount, plus the full name when the step shortens it.
+  var popover = function (el, on) {
+    var old = $(".amt-pop", el);
+    if (old) old.remove();
+    if (!on) return;
+    var row = $('.ingredients li[data-ing="' + el.dataset.ing + '"]');
+    if (!row) return;
+    var amt = $(".amt", row), l = el.closest("[lang]").lang;
+    var full = $(".name .l-" + l, row), name = full ? full.textContent.trim() : "";
+    var html = amt.textContent.trim() ? amt.innerHTML.trim() : "";
+    if (name && name !== el.textContent.trim()) html += (html ? " · " : "") + name.replace(/[&<>]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c];
+    });
+    if (!html) return;
+    var pop = document.createElement("span");
+    pop.className = "amt-pop";
+    pop.setAttribute("aria-hidden", "true");
+    pop.innerHTML = html;
+    el.appendChild(pop);
+    // Keep it on screen: shift sideways, the arrow stays over the word.
+    var r = pop.getBoundingClientRect(), vw = document.documentElement.clientWidth;
+    var dx = Math.max(8 - r.left, 0) + Math.min(vw - 8 - r.right, 0);
+    if (dx) pop.style.setProperty("--dx", dx + "px");
+  };
+  var show = function (el, on) { highlight(el.dataset.ing, on); popover(el, on); };
+  var clearPinned = function (except) {
+    $$(".ing.pinned").forEach(function (p) { if (p !== except) { p.classList.remove("pinned"); show(p, false); } });
+  };
   $$(".ing").forEach(function (el) {
-    el.addEventListener("mouseenter", function () { highlight(el.dataset.ing, true); });
-    el.addEventListener("mouseleave", function () { highlight(el.dataset.ing, false); });
+    // Hover is mouse only; on touch, mouse emulation would fire enter right before the tap's click.
+    el.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") show(el, true); });
+    el.addEventListener("pointerleave", function (e) {
+      if (e.pointerType === "mouse" && !el.classList.contains("pinned")) show(el, false);
+    });
     el.addEventListener("click", function () {
-      var on = !el.classList.contains("hl");
-      $$(".hl").forEach(function (h) { h.classList.remove("hl"); });
-      highlight(el.dataset.ing, on);
+      clearPinned(el);
+      var on = el.classList.toggle("pinned");
+      show(el, on);
     });
   });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".ing")) clearPinned(null); });
 
   // --- recipe: sticky ingredients only when the whole list fits on screen --
   var ingBox = $(".ingredients");

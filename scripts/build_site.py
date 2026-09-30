@@ -66,8 +66,7 @@ def refs(text: str, ings: dict, lang: str) -> Markup:
         parts = full.split(", ")
         is_list = len(parts) >= 3 and all(" " not in p for p in parts)
         short = full if is_list else re.split(r" \(|, ", full, maxsplit=1)[0]
-        return (f'<span class="ing" data-ing="{i["id"]}" title="{escape(full)}">'
-                f'{escape(short)}</span>')
+        return f'<span class="ing" data-ing="{i["id"]}">{escape(short)}</span>'
     return Markup(REF.sub(sub, str(escape(text))))
 
 
