@@ -168,5 +168,26 @@
       "mood:meal-prep",
       "time:slow"
     ]
+  },
+  {
+    "id": "russischer-zupfkuchen",
+    "title": {
+      "de": "Russischer Zupfkuchen",
+      "en": "Russian Pluck Cake (Russischer Zupfkuchen)"
+    },
+    "source_lang": "de",
+    "file": "recipes/russischer-zupfkuchen.yaml",
+    "time_total": 90,
+    "tags": [
+      "course:baking",
+      "course:dessert",
+      "cuisine:german",
+      "protein:none",
+      "method:bake",
+      "equipment:oven",
+      "effort:low",
+      "mood:crowd",
+      "mood:comfort"
+    ]
   }
 ]
