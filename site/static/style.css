@@ -120,16 +120,6 @@ html[data-lang="en"] [data-set-lang="en"] { background: var(--ink); color: var(-
 .timebox { background: var(--red); color: var(--paper); padding: .2rem .4rem; }
 .empty { text-align: center; padding: 2rem 0; }
 
-/* Artwork: fixed aspect boxes (no layout shift), cropped to fill, pixel mark top-right. */
-.art { position: relative; margin: 0; background: var(--paper); overflow: hidden; }
-.art img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.art-3x2 { aspect-ratio: 3 / 2; }
-.art-3x1 { aspect-ratio: 3 / 1; }
-.art svg { position: absolute; top: .6rem; right: .6rem; width: 1.6rem; height: 1.6rem; }
-.banner { margin: .5rem 0 1rem; max-height: 16rem; }  /* cropped by object-fit, keeps recipes in view */
-.card .art { margin: -1.25rem -1.25rem 1rem; }
-.recipe-head .art { margin-top: .5rem; }
-
 /* Recipe head */
 .recipe-head h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.02; letter-spacing: -0.025em; margin: .75rem 0; }
 .lede { font-size: 1.3rem; line-height: 1.35; margin: 0 0 1.25rem; }
@@ -247,10 +237,7 @@ body.cooking .steps .step-done:has(input:focus-visible)::before { outline-color:
   /* The sticky list's containing block is .recipe-body, so it can't slide over the notes below. */
   .recipe-body { grid-template-columns: 24rem 1fr; gap: 1.5rem; align-items: start; }
   .ingredients.fits { position: sticky; top: 1rem; }  /* only when it fits the screen, see app.js */
-  .recipe-head:not(.has-art), .notes { max-width: 52rem; }
-  .recipe-head.has-art { display: grid; grid-template-columns: 1fr minmax(20rem, 28rem); gap: 2.5rem; align-items: start; }
-  .recipe-head.has-art .art { grid-column: 2; grid-row: 1; margin-top: 1rem; }
-  .recipe-head.has-art .head-text { grid-column: 1; grid-row: 1; }
+  .recipe-head, .notes { max-width: 52rem; }
 }
 
 /* display:flex drops the native disclosure triangle; draw a plus/minus instead. */

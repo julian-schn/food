@@ -7,7 +7,6 @@
 - `index.json` generated, never edit by hand
 - `site/` templates and static assets for the GitHub Pages site. `scripts/build_site.py`
   renders it into `_site/` (generated, never committed; CI builds and deploys it on push to `main`)
-- `site/static/art/<id>.png` optional recipe artwork; style, sizes and prompts in `site/static/art/BRIEF.md`
 
 ## Adding a recipe
 1. Metric only. Convert imperial (lb, oz, cups, °F) before writing.

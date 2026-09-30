@@ -4,7 +4,7 @@ Usage: python scripts/build_site.py
 Set GITHUB_REPOSITORY (owner/repo, set automatically in Actions) to get
 "view source" links on recipe pages.
 """
-import json, os, re, shutil, sys, zlib
+import json, os, re, shutil, sys
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -16,10 +16,6 @@ from build_index import ROOT, REF, load_recipes, flat_tags, vocab  # noqa: E402
 OUT = ROOT / "_site"
 SITE = ROOT / "site"
 REPO = os.environ.get("GITHUB_REPOSITORY")
-# Absolute site URL, needed for og:image. Derived from the repo in Actions (project pages).
-SITE_URL = (f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[1]}/" if REPO else None)
-ART = SITE / "static" / "art"
-ART_EXT = (".webp", ".png", ".jpg")
 
 FACETS = {
     "course": {"de": "Gang", "en": "Course"},
@@ -88,25 +84,6 @@ def keep_units(value):
     return value
 
 
-def art_file(name: str) -> str | None:
-    """Path of site/static/art/<name>.<ext> relative to static/, or None."""
-    for ext in ART_EXT:
-        if (ART / f"{name}{ext}").exists():
-            return f"art/{name}{ext}"
-    return None
-
-
-def recipe_art(rid: str) -> str | None:
-    """The recipe's own artwork, else a generic fallback picked by a stable hash of the id."""
-    own = art_file(rid)
-    if own:
-        return own
-    fallbacks = sorted(p for p in ART.glob("_fallback-*") if p.suffix in ART_EXT) if ART.exists() else []
-    if not fallbacks:
-        return None
-    return f"art/{fallbacks[zlib.crc32(rid.encode()) % len(fallbacks)].name}"
-
-
 def tag_label(tag: str) -> str:
     return tag.split(":", 1)[-1]
 
@@ -120,7 +97,7 @@ def build():
                       finalize=keep_units)
     env.filters.update(amount=fmt_amount, minutes=fmt_minutes, timer=fmt_timer,
                        refs=refs, tag_label=tag_label)
-    env.globals.update(UNITS=UNITS, OVEN=OVEN, FACETS=FACETS, SITE_URL=SITE_URL, social=art_file("_social"))
+    env.globals.update(UNITS=UNITS, OVEN=OVEN, FACETS=FACETS)
 
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -138,13 +115,12 @@ def build():
                 r["_groups"].append((i.get("group"), []))
             r["_groups"][-1][1].append(i)
         r["_source_url"] = f"https://github.com/{REPO}/blob/main/recipes/{path.name}" if REPO else None
-        r["_art"] = recipe_art(r["id"])
         ratings = [e["rating"] for e in r.get("log", []) if "rating" in e]
         r["_rating"] = round(sum(ratings) / len(ratings), 1) if ratings else None
         cards.append({
             "id": r["id"], "title": r["title"], "description": r.get("description"),
             "time_total": r["time"]["active"] + r["time"]["passive"], "tags": tags,
-            "rating": r["_rating"], "art": r["_art"],
+            "rating": r["_rating"],
         })
         page = OUT / "r" / r["id"] / "index.html"
         page.parent.mkdir(parents=True)
@@ -156,7 +132,7 @@ def build():
     facets += [(f, [t for t in ts if t in used]) for f, ts in DERIVED.items()]
     facets = [(f, ts) for f, ts in facets if ts]
     (OUT / "index.html").write_text(env.get_template("index.html").render(
-        cards=cards, facets=facets, root="", banner=art_file("_index"),
+        cards=cards, facets=facets, root="",
         data=Markup(json.dumps([{k: c[k] for k in ("id", "title", "description", "tags")}
                                 for c in cards], ensure_ascii=False).replace("</", "<\\/"))))
     print(f"✓ site: {len(cards)} recipes → {OUT.relative_to(ROOT)}/")
